@@ -4,6 +4,8 @@ import { Dela_Gothic_One, Sora } from "next/font/google";
 import Button from "./components/button";
 import Quote from "./components/quote";
 import Vision from "./components/vision";
+import RecapVideo from "./components/RecapVideo";
+import StoreCard from "./components/StoreCard";
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -46,15 +48,9 @@ export default function Home() {
       </div>
       <Quote />
       <Vision />
-      <div className="h-screen">
-        <iframe
-          className="w-full h-full"
-          src="YOUR_YOUTUBE_VIDEO_URL"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
+      <RecapVideo/> 
+      <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true}/>
+      <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false}/>
     </div>
 
   );
