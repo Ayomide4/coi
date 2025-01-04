@@ -2,6 +2,7 @@ import Image from "next/image";
 import coi_bg from "../../public/assets/coi-bg-test.png";
 import { Dela_Gothic_One, Sora } from "next/font/google";
 import Button from "./components/button";
+import Quote from "./components/quote";
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function Home() {
           </h1>
 
           <div className="mt-5">
-            <Button size={[20, 3]} text="LEARN MORE" />
+            <Button size={[22, 3]} text="LEARN MORE" />
           </div>
         </div>
 
@@ -42,6 +43,7 @@ export default function Home() {
           className="w-full h-[calc(100%-2rem)] object-cover"
         />
       </div>
+      <Quote />
     </div>
   );
 }
