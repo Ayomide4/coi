@@ -6,6 +6,8 @@ import Quote from "./components/quote";
 import Vision from "./components/vision";
 import RecapVideo from "./components/RecapVideo";
 import StoreCard from "./components/StoreCard";
+import ViewGallery from "./components/ViewGallery";
+import EventCountdown from "./components/EventCountdown";
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -51,6 +53,8 @@ export default function Home() {
       <RecapVideo/> 
       <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true}/>
       <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false}/>
+      <ViewGallery/>
+      <EventCountdown/>
     </div>
 
   );

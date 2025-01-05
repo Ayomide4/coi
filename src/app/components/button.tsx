@@ -1,9 +1,10 @@
 interface Props {
   size: [number, number];
   text: string;
+  color?: string;
 }
 
-export default function Button({ size, text }: Props) {
+export default function Button({ size, text,color }: Props) {
   const [width, height] = size;
   return (
     <div
@@ -11,7 +12,7 @@ export default function Button({ size, text }: Props) {
         width: `${width}rem`,
         height: `${height}rem`,
       }}
-      className={`flex items-center justify-center  bg-primary text-2xl`}
+      className={`flex items-center justify-center  ${color ? color :  "bg-primary"} text-2xl`}
     >
       {text}
     </div>
