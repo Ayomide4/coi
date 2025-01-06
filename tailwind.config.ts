@@ -14,8 +14,8 @@ export default {
         primary: "#2A847C",
         secondary: "#101D1B",
         accent: "#5CD1C7",
-        foreground: "var(--foreground)",
-        backgroundGreen: "#1C3431"
+        foreground: "#151D1C",
+        backgroundGreen: "#1C3431",
       },
     },
   },
