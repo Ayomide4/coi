@@ -8,7 +8,7 @@ import RecapVideo from "./components/RecapVideo";
 import StoreCard from "./components/StoreCard";
 import ViewGallery from "./components/ViewGallery";
 import EventCountdown from "./components/EventCountdown";
-import Footer from "./components/Footer";
+import HamburgerMenu from "./components/HamburgerMenu";
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -24,6 +24,8 @@ const sora = Sora({
 export default function Home() {
   return (
     <div className={`m-0 p-0 text-textColor`}>
+      <HamburgerMenu />
+      <Image src="/assets/coi-logo.svg" width={75} height={75} className="absolute top-10 left-5 object-cover" alt="circle of intimacy logo"/>
       <div className="w-full h-[calc(100%-2rem)]">
         <div className="flex flex-col w-full h-full absolute items-center justify-center">
           <h2 className={`${sora.className} text-4xl`}>Join us for</h2>
@@ -56,7 +58,6 @@ export default function Home() {
       <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false}/>
       <ViewGallery/>
       <EventCountdown/>
-      <Footer/>
     </div>
 
   );

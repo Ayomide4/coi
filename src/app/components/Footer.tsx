@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
           <div className="w-full relative h-32">
             <Image
-              src="/assets/coi-logo 1.svg"
+              src="/assets/coi-logo.svg"
               alt="Circle of Intimacy Logo"
               fill
               className="object-contain"
