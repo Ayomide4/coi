@@ -18,7 +18,7 @@ export default function StoreCard({imageURL, firstImage} :Props) {
             />
       <div className="relative z-10 w-full h-full ">
         {firstImage ? 
-        <h1 className="z-10 text-black absolute top-3 right-20 text-lg w-52 ">CRAFTING UNIQUE NARRATIVES THROUGH CHRIST</h1> :
+        <h1 className="z-10 text-black absolute top-3 right-10 text-lg w-40 ">CRAFTING UNIQUE NARRATIVES THROUGH CHRIST</h1> :
         <h1 className="z-10 text-black absolute top-3 left-4 text-xl w-52  ">ANYTHING IS POSSIBLE THROUGH HIM</h1>
 }
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8">

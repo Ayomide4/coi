@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import HamburgerMenu from "./components/HamburgerMenu";
 
 const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
@@ -17,10 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sourceSans3.className}   antialiased`}>
+      <body className={`${sourceSans3.className}   antialiased bg-background`}>
+        <HamburgerMenu/>
         {children}
 
+<div className="mt-10">
       <Footer/>
+</div>
       </body>
     </html>
   );

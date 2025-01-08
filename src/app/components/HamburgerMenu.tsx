@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 const HamburgerMenu = () => {
@@ -46,12 +47,12 @@ const HamburgerMenu = () => {
             >
               ✕
             </button>
-            <nav className="absolute top-30">
+            <nav className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <ul className="space-y-10 text-6xl font-light">
-                <li><a href="#vision">HOME</a></li>
-                <li><a href="#gallery">ABOUT</a></li>
-                <li><a href="#store">STORE</a></li>
-                <li><a href="#store">GIVE</a></li>
+                <li><Link href="/" onClick={() => setIsOpen(false)}>HOME</Link></li>
+                <li><Link href="/about" onClick={() => setIsOpen(false)}>ABOUT</Link></li>
+                <li><Link href="/store" onClick={() => setIsOpen(false)}>STORE</Link></li>
+                <li><a target='_blank' href="https://cash.app/$CircleOfIntimacy1" onClick={() => setIsOpen(false)}>GIVE</a></li>
               </ul>
             </nav>
           </div>

@@ -8,7 +8,6 @@ import RecapVideo from "./components/RecapVideo";
 import StoreCard from "./components/StoreCard";
 import ViewGallery from "./components/ViewGallery";
 import EventCountdown from "./components/EventCountdown";
-import HamburgerMenu from "./components/HamburgerMenu";
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -21,13 +20,27 @@ const sora = Sora({
   weight: "400",
 });
 
+//TODO: NAVBAR + IG SVG SHOULD BE COMPONET IN LAYOUT
+
 export default function Home() {
   return (
     <div className={`m-0 p-0 text-textColor`}>
-      <HamburgerMenu />
-      <Image src="/assets/coi-logo.svg" width={75} height={75} className="absolute top-10 left-5 object-cover" alt="circle of intimacy logo"/>
-      <div className="w-full h-[calc(100%-2rem)]">
-        <div className="flex flex-col w-full h-full absolute items-center justify-center">
+      <div className="flex items-center absolute top-10 left-5">
+        <a target="_blank" href="https://www.instagram.com/circleofintimacy/">
+          <Image
+            src="/assets/Instagram.svg"
+            width={40}
+            height={40}
+            alt="Instagram icon"
+            className="mr-2"
+          />
+        </a>
+        <p>Cart(0)</p>
+      </div>
+
+      {/* <Image src="/assets/coi-logo.svg" width={75} height={75} className="absolute top-10 left-5 object-cover" alt="circle of intimacy logo"/> */}
+      <div className="w-full h-[calc(100%-2rem)]  flex items-center">
+        <div className="flex flex-col w-full absolute items-center justify-center  ">
           <h2 className={`${sora.className} text-4xl`}>Join us for</h2>
           <h1
             className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter`}
@@ -40,7 +53,7 @@ export default function Home() {
             2025
           </h1>
 
-          <div className="mt-5">
+          <div className="mt-10">
             <Button size={[22, 3]} text="LEARN MORE" />
           </div>
         </div>
@@ -53,12 +66,11 @@ export default function Home() {
       </div>
       <Quote />
       <Vision />
-      <RecapVideo/> 
-      <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true}/>
-      <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false}/>
-      <ViewGallery/>
-      <EventCountdown/>
+      <RecapVideo />
+      <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true} />
+      <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
+      <ViewGallery />
+      <EventCountdown />
     </div>
-
   );
 }
