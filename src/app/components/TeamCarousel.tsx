@@ -11,6 +11,7 @@ interface TeamMember {
 interface Props {
   team: TeamMember[];
 }
+
 export default function TeamCarousel({ team }: Props) {
   const carouselRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

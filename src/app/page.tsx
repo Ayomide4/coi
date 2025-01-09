@@ -8,6 +8,7 @@ import RecapVideo from "./components/RecapVideo";
 import StoreCard from "./components/StoreCard";
 import ViewGallery from "./components/ViewGallery";
 import EventCountdown from "./components/EventCountdown";
+import {ToastContainer, toast } from "react-toastify"
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -23,20 +24,9 @@ const sora = Sora({
 //TODO: NAVBAR + IG SVG SHOULD BE COMPONET IN LAYOUT
 
 export default function Home() {
+  const notify = () => toast("Registration will open soon!")
   return (
     <div className={`m-0 p-0 text-textColor`}>
-      <div className="flex items-center absolute top-10 left-5">
-        <a target="_blank" href="https://www.instagram.com/circleofintimacy/">
-          <Image
-            src="/assets/Instagram.svg"
-            width={40}
-            height={40}
-            alt="Instagram icon"
-            className="mr-2"
-          />
-        </a>
-        <p>Cart(0)</p>
-      </div>
 
       {/* <Image src="/assets/coi-logo.svg" width={75} height={75} className="absolute top-10 left-5 object-cover" alt="circle of intimacy logo"/> */}
       <div className="w-full h-[calc(100%-2rem)]  flex items-center">
@@ -54,7 +44,7 @@ export default function Home() {
           </h1>
 
           <div className="mt-10">
-            <Button size={[22, 3]} text="LEARN MORE" />
+            <Button size={[22, 3]} text="LEARN MORE" url="/about" />
           </div>
         </div>
 
@@ -71,6 +61,7 @@ export default function Home() {
       <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
       <ViewGallery />
       <EventCountdown />
+      <ToastContainer/>
     </div>
   );
 }

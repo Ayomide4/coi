@@ -5,25 +5,9 @@ import TeamImage from "../components/TeamImage";
 export default function About() {
   const team = [
     {
-      name: "Ayomide Ifanse",
-      role: "Live stream & Broadcast Coordinator",
-      imageUrl: "/assets/AyoIfanse.JPG",
-    },
-    {
-      name: "Subomi Borishade",
-      role: "Streamline Coordinator",
-      imageUrl: "/assets/Subomi.jpg",
-    },
-    {
-      name: "Tope Pecku",
-      role: "Event Experience Coordinator",
-      imageUrl: "/assets/Tope.jpg",
-    },
-
-    {
-      name: "Abiodun Adejumobi",
-      role: "Ministerial Care Coordinator",
-      imageUrl: "/assets/Abi.jpg",
+      name: "Sikemi Omotosho",
+      role: "Lead Servant",
+      imageUrl: "/assets/Sikemi.JPG",
     },
 
     {
@@ -32,9 +16,14 @@ export default function About() {
       imageUrl: "/assets/Crystal.jpeg",
     },
     {
-      name: "Sikemi Omotosho",
-      role: "Lead Servant",
-      imageUrl: "/assets/Sikemi.JPG",
+      name: "Tope Pecku",
+      role: "Event Experience Coordinator",
+      imageUrl: "/assets/Tope.jpg",
+    },
+    {
+      name: "Abiodun Adejumobi",
+      role: "Ministerial Care Coordinator",
+      imageUrl: "/assets/Abi.jpg",
     },
     {
       name: "Emmanuel Doku",
@@ -57,6 +46,16 @@ export default function About() {
       imageUrl: "/assets/Michael.jpg",
     },
     {
+      name: "Ayomide Ifanse",
+      role: "Live stream & Broadcast Coordinator",
+      imageUrl: "/assets/AyoIfanse.JPG",
+    },
+    {
+      name: "Subomi Borishade",
+      role: "Streamline Coordinator",
+      imageUrl: "/assets/Subomi.jpg",
+    },
+    {
       name: "Joshua Fakuade",
       role: "Worship Production Coordinator",
       imageUrl: "/assets/Joshua.jpg",
@@ -65,13 +64,15 @@ export default function About() {
 
   return (
     <div className="bg-[#081211] text-textColor">
-      <main >
+      <main>
         <section className="text-center p-4 mb-8">
           <h1 className="text-4xl font-semibold mb-8 mt-24">Meet our team</h1>
           <TeamCarousel team={team} />
         </section>
         <section className="text-center mb-16 px-8 flex flex-col items-center">
-          <h2 id="vision" className="text-3xl font-normal mb-4">Our Vision</h2>
+          <h2 id="vision" className="text-3xl font-normal mb-4">
+            Our Vision
+          </h2>
           <div className="space-y-4 mb-8 ">
             <p className="text-lg">
               Our vision is to see a generation pursuing Jesus, living as His
@@ -94,7 +95,9 @@ export default function About() {
           </div>
         </section>
         <section className="text-center px-8 ">
-          <h2 id="mission"className="text-3xl font-normal mb-4">Our Mission</h2>
+          <h2 id="mission" className="text-3xl font-normal mb-4">
+            Our Mission
+          </h2>
           <div className="space-y-4  text-lg flex flex-col items-center">
             <p className="">
               Circle of Intimacy exists to facilitate life-changing encounters

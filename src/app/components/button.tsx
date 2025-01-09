@@ -2,11 +2,13 @@ interface Props {
   size: [number, number];
   text: string;
   color?: string;
+  url? : string;
 }
 
-export default function Button({ size, text,color }: Props) {
+export default function Button({ size, text, color, url }: Props) {
   const [width, height] = size;
   return (
+   <a href={url } className="cursor-pointer"> 
     <div
       style={{
         width: `${width}rem`,
@@ -16,5 +18,6 @@ export default function Button({ size, text,color }: Props) {
     >
       {text}
     </div>
+</a>
   );
 }
