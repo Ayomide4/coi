@@ -8,7 +8,7 @@ import RecapVideo from "./components/RecapVideo";
 import StoreCard from "./components/StoreCard";
 import ViewGallery from "./components/ViewGallery";
 import EventCountdown from "./components/EventCountdown";
-import {ToastContainer } from "react-toastify"
+import { ToastContainer } from "react-toastify";
 
 const headingFont = Dela_Gothic_One({
   subsets: ["latin"],
@@ -21,16 +21,15 @@ const sora = Sora({
   weight: "400",
 });
 
-
 export default function Home() {
   return (
-    <div className={`m-0 p-0 text-textColor 0`}>
+    <div className={`m-0 p-0 text-textColor`}>
       {/* <Image src="/assets/coi-logo.svg" width={75} height={75} className="absolute top-10 left-5 object-cover" alt="circle of intimacy logo"/> */}
       <div className="w-full h-[calc(100%-2rem)]  flex items-center">
         <div className="flex flex-col w-full absolute items-center justify-center  ">
           <h2 className={`${sora.className} text-4xl`}>Join us for</h2>
           <h1
-            className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter`}
+            className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter `}
           >
             CIRCLE OF INTIMACY
           </h1>
@@ -48,7 +47,10 @@ export default function Home() {
         <Image
           src={coi_bg}
           alt="people worshiping inside a church"
-          className="w-full h-[calc(100%-2rem)] object-cover md:h-[60vh]"
+          priority
+          quality={90}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw" // Responsive sizes
+          className="w-full h-[calc(100%-2rem)] object-cover md:h-[70vh] md:object-fill"
         />
       </div>
       <Quote />
@@ -58,7 +60,7 @@ export default function Home() {
       <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
       <ViewGallery />
       <EventCountdown />
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

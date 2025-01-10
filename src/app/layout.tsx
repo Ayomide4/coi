@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sourceSans3.className}   antialiased bg-background`}>
         <HamburgerMenu />
-        <Navigation/>
+        <Navigation />
         <div className="flex items-center absolute top-10 left-5">
           <a target="_blank" href="https://www.instagram.com/circleofintimacy/">
             <Image
@@ -33,7 +33,7 @@ export default function RootLayout({
               className="mr-2"
             />
           </a>
-          <p>Cart(0)</p>
+          <p className="md:text-2xl">Cart(0)</p>
         </div>
 
         {children}
