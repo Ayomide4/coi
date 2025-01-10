@@ -1,28 +1,33 @@
 import Image from "next/image";
-import vision from "../../../public/assets/vision.png"
+import vision from "../../../public/assets/vision.png";
 import Button from "./button";
 
 export default function Vision() {
+  //fix md img
   return (
-    <div className="relative">
-        <div className=" relative">
-            <Image 
-                src={vision} 
-                alt="vision" 
-                className="absolute inset-0 w-full h-full object-cover z-0"
-            />
-            <div className="relative z-10 flex flex-col items-center justify-center h-full p-8 bg-black/10 ">
-                <h1 className="text-center text-4xl text-white mb-6">OUR VISION</h1>
-                <p className="text-center text-2xl text-white mb-4 max-w-4xl">
-                Our vision is to see a generation pursuing Jesus, living as His dwelling place, boldly sharing the gospel, and carrying His love to the world.
-                </p>
-                <p className="text-center text-2xl text-white max-w-4xl mb-10">
-                To inspire intimacy with Jesus by fostering worship, prayer, and obedience, helping people find purpose and fulfillment in Him. A Space to experience Gods undiluted presence.
-                </p>
+    <div className="relative md:bg-secondary  md:flex md:h-[55vh]">
+      <div className="relative  md:w-full md:p-8">
+        <Image
+          src={vision}
+          alt="vision"
+          className="absolute inset-0 w-full h-full object-cover z-0  md:absolute md:w-96 md:h-4/5 md:top-0 right-0 "
+        />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0">
+          <h1 className="text-center text-4xl text-white mb-6 md:text-left">OUR VISION</h1>
+          <p className="text-center text-2xl text-white mb-4 max-w-4xl md:text-lg md:text-left">
+            Our vision is to see a generation pursuing Jesus, living as His
+            dwelling place, boldly sharing the gospel, and carrying His love to
+            the world.
+          </p>
+          <p className="text-center text-2xl text-white max-w-4xl mb-10 md:text-lg md:text-left ">
+            To inspire intimacy with Jesus by fostering worship, prayer, and
+            obedience, helping people find purpose and fulfillment in Him. A
+            Space to experience Gods undiluted presence.
+          </p>
 
-            <Button size={[22, 3]} text="LEARN MORE" url="/about"/>
-            </div>
+          <Button size={[22, 3]} text="LEARN MORE" url="/about" />
         </div>
+      </div>
     </div>
   );
 }

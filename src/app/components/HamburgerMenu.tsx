@@ -22,7 +22,7 @@ const HamburgerMenu = () => {
   }, [isOpen])
 
   return (
-    <div className="fixed top-10 right-5 z-50">
+    <div className="fixed top-10 right-5 z-50 md:hidden">
       {/* Hamburger Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
