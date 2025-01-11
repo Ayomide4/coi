@@ -5,12 +5,12 @@ import Button from "./button";
 export default function Vision() {
   //fix md img
   return (
-    <div className="relative md:bg-secondary  md:h-[42vh]">
-      <div className="relative md:w-full md:p-10 ">
+    <div className="relative md:bg-secondary  md:h-[42vh] lg:flex lg:items-center lg:justify-center">
+      <div className="relative md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full">
         <Image
           src={vision}
           alt="vision"
-          className="absolute  w-full h-full object-cover z-0  md:absolute md:w-96 md:h-[calc(50vh-12rem)]  md:top-8 md:right-5 "
+          className="absolute w-full h-full object-cover z-0  md:absolute md:w-96 md:h-[calc(50vh-12rem)]  md:top-8 md:right-8 lg:w-[600px]"
         />
         <div className="relative z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 ">
           <h1 className="text-center text-4xl text-white mb-6 md:text-left">

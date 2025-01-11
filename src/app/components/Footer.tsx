@@ -11,9 +11,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="bg-foreground w-full md:w-full p-5 md:p-0 md:m-0 ">
-      <div className=" p-4 w-full flex  flex-col md:flex-row items-center md:justify-start md:w-full ">
-        <div className="w-40 relative h-40 hidden md:block">
+    <div className="bg-foreground w-full md:w-full p-5  md:m-0 md:flex md:flex-col md:items-center ">
+      <div className=" p-4 w-full flex  flex-col md:flex-row items-center md:justify-between lg:w-4/5">
+        <div className="w-52 relative h-44 hidden md:block ">
           <Image
             src="/assets/coi-logo.svg"
             alt="Circle of Intimacy Logo"
@@ -21,7 +21,7 @@ export default function Footer() {
             className="object-contain"
           />
         </div>
-        <div className="md:ml-10 ">
+        <div className="">
           <h1 className="font-bold text-4xl mb-2 md:mb-4 text-nowrap ">
             CIRCLE OF INTIMACY
           </h1>
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="md:px-4">
+      <div className="md:px-4 w-full ">
         <div className="border-b-2 border-textColor w-full my-4"></div>
         <div className="flex justify-between items-center">
           <p className="font-bold">Copyright @ {currentYear}</p>

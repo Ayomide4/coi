@@ -51,7 +51,7 @@ export default function Home() {
           priority
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw"
-          className="w-full h-[calc(100%-2rem)] object-cover md:h-[70vh] md:object-fill"
+          className="w-full h-[calc(100%-2rem)] object-cover md:h-[70vh] md:object-cover"
         />
       </div>
       <Quote />
@@ -74,8 +74,10 @@ export default function Home() {
         </div>
         <h2 className="w-fit font-inter">in your own terms</h2>
       </div>
-      <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true} />
-      <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
+      <div className="lg:flex">
+        <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true} />
+        <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
+      </div>
       <ViewGallery />
       <EventCountdown />
       <ToastContainer />

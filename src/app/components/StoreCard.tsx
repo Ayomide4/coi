@@ -8,21 +8,21 @@ interface Props {
 
 export default function StoreCard({ imageURL, firstImage }: Props) {
   return (
-    <div className="relative h-[600px] w-full">
+    <div className="relative h-[600px] w-full lg:h-[800px]">
       <Image
         src={imageURL}
         alt="store image"
         width={500}
         height={600}
-        className="absolute w-full h-full z-0 object-cover md:object-fit"
+        className="absolute w-full h-full z-0 object-cover lg:object-cover"
       />
       <div className="relative z-10 w-full h-full ">
         {firstImage ? (
-          <h1 className="z-10 text-black absolute top-3 right-10 text-lg w-40 ">
+          <h1 className="z-10 text-black absolute top-3 right-10 text-lg w-40 md:right-3 lg:text-2xl lg:w-80 lg:right-4 ">
             CRAFTING UNIQUE NARRATIVES THROUGH CHRIST
           </h1>
         ) : (
-          <h1 className="z-10 text-black absolute top-3 left-4 text-xl w-52  ">
+          <h1 className="z-10 text-black absolute top-3 left-4 text-xl w-52 lg:text-2xl  lg:left-auto lg:right-4 lg:w-fit ">
             ANYTHING IS POSSIBLE THROUGH HIM
           </h1>
         )}
