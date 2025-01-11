@@ -27,7 +27,9 @@ export default function Vision() {
             Space to experience Gods undiluted presence.
           </p>
 
-          <Button size={[22, 3]} text="LEARN MORE" url="/about" />
+          <div className="md:w-72">
+            <Button size={[22, 3]} text="LEARN MORE" url="/about" />
+          </div>
         </div>
       </div>
     </div>

@@ -26,9 +26,8 @@ const sora = Sora({
 export default function Home() {
   return (
     <div className={`m-0 p-0 text-textColor`}>
-      {/* <Image src="/assets/coi-logo.svg" width={75} height={75} className="absolute top-10 left-5 object-cover" alt="circle of intimacy logo"/> */}
       <div className="w-full h-[calc(100%-2rem)]  flex items-center">
-        <div className="flex flex-col w-full absolute items-center justify-center  ">
+        <div className="flex flex-col w-full absolute items-center justify-center">
           <h2 className={`${sora.className} text-4xl`}>Join us for</h2>
           <h1
             className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter `}
@@ -41,7 +40,7 @@ export default function Home() {
             2025
           </h1>
 
-          <div className="mt-10">
+          <div className="mt-10 md:w-72 ">
             <Button size={[22, 3]} text="LEARN MORE" url="/about" />
           </div>
         </div>
@@ -51,7 +50,7 @@ export default function Home() {
           alt="people worshiping inside a church"
           priority
           quality={90}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw" // Responsive sizes
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw"
           className="w-full h-[calc(100%-2rem)] object-cover md:h-[70vh] md:object-fill"
         />
       </div>
