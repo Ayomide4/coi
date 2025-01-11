@@ -38,7 +38,7 @@ export default function RootLayout({
 
         {children}
 
-        <div className="mt-10">
+        <div className="mt-10 p-2 md:p-4">
           <Footer />
         </div>
       </body>
