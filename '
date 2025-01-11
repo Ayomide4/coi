@@ -58,22 +58,13 @@ export default function Home() {
       <Quote />
       <Vision />
       <RecapVideo />
-      <div className="hidden  text-3xl md:flex flex-col w-full items-center p-10 ">
-        <div className="bg-background items-center justify-center md:flex w-fit">
-          <h2 className="w-fit font-inter mr-2">
-            Celebrate your <span className="text-accent">faith</span>
-          </h2>
-          <Image
-            src="/assets/diamond.svg"
-            alt="diamond svg"
-            width={10}
-            height={10}
-          />
-          <h2 className="ml-2">
-            <span className="text-accent">Expressed</span>
-          </h2>
-        </div>
-        <h2 className="w-fit font-inter">in your own terms</h2>
+      <div className="bg-background hidden md:block h-32 w-full items-center justify-center mdflex">
+        <h2 className="border w-fit">
+          Celebrate your <span>faith</span>
+        </h2>
+        <h2 className="w-fit border">
+          <span>Expressed</span> in your own terms{" "}
+        </h2>
       </div>
       <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true} />
       <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
