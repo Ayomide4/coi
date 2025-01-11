@@ -26,7 +26,7 @@ export default function StoreCard({ imageURL, firstImage }: Props) {
             ANYTHING IS POSSIBLE THROUGH HIM
           </h1>
         )}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full md:px-8 px-2">
           <Button size={[22, 2]} text="SHOP NOW" url="/store" />
         </div>
       </div>

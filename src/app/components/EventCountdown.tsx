@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Button from "./button";
 import { toast } from "react-toastify";
@@ -8,7 +8,7 @@ export default function EventCountdown() {
   //TODO:  add countdown and registration link
   const notify = () => toast("Registration will open soon!");
   return (
-    <div className="px-4 bg-background py-4 w-full min-h-[900px] relative ">
+    <div className="px-4 bg-background py-4 w-full min-h-[900px] relative flex flex-col items-center justify-center">
       <h1 className="text-5xl font-bold text-center">
         A NIGHT WHERE <span className="text-primary">WORSHIP</span> MEETS{" "}
         <span className="text-primary">TRUTH.</span>
@@ -40,16 +40,18 @@ export default function EventCountdown() {
         </div>
       </div>
 
-      {/* <h1 className="text-4xl font-bold text-center my-5">
-        191 days until the event
-      </h1> */}
-      <CountdownDisplay/>
-      <div onClick={notify}>
-        <Button
-          size={[22, 2.5]}
-          text="Register Now"
-          color="bg-backgroundGreen"
-        />
+      <CountdownDisplay />
+      <div className="w-full md:flex md:items-center md:justify-center">
+        <div
+          onClick={notify}
+          className="w-full md:w-72 md:self-center cursor-pointer"
+        >
+          <Button
+            size={[22, 2.5]}
+            text="Register Now"
+            color="bg-backgroundGreen"
+          />
+        </div>
       </div>
     </div>
   );

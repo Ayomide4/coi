@@ -1,36 +1,86 @@
-'use client'
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 
 export default function CountdownDisplay() {
-  const [daysUntil, setDaysUntil] = useState(0);
-  
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
+
   useEffect(() => {
-    const calculateDays = () => {
-      const eventDate = new Date(2025, 6, 11); // Month is 0-based, so 6 = July
-      const today = new Date();
-      
-      // Reset time portion to ensure accurate day calculation
-      today.setHours(0, 0, 0, 0);
-      eventDate.setHours(0, 0, 0, 0);
-      
-      const diffTime = eventDate - today;
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      
-      setDaysUntil(diffDays);
+    const eventDate = new Date(2025, 6, 11); // Month is 0-based, so 6 = July
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const diff = eventDate.getTime() - now.getTime();
+
+      if (diff <= 0) {
+        // Event has passed
+        setTimeLeft({ days: 0, hours: "00", minutes: "00", seconds: "00" });
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      )
+        .toString()
+        .padStart(2, "0");
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        .toString()
+        .padStart(2, "0");
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000)
+        .toString()
+        .padStart(2, "0");
+
+      setTimeLeft({ days, hours, minutes, seconds });
     };
 
-    // Calculate initially
-    calculateDays();
-    
-    // Update daily
-    const interval = setInterval(calculateDays, 24 * 60 * 60 * 1000);
-    
-    return () => clearInterval(interval);
+    calculateTimeLeft(); // Initial calculation
+    const interval = setInterval(calculateTimeLeft, 1000); // Update every second
+
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
-    <h1 className="text-4xl font-bold text-center py-8">
-      {daysUntil} {daysUntil === 1 ? 'day' : 'days'} until the event
-    </h1>
+    <div className="text-center py-8 flex flex-col items-center justify-center ">
+      <h1 className=" text-3xl font-bold md:text-4xl">
+        Countdown to the Event:
+      </h1>
+      <div className="text-2xl font-semibold mt-4  flex gap-1  md:gap-4">
+        <div className="flex flex-col items-center ">
+          <h2 className="text-4xl">{timeLeft.days}</h2>
+          <span className="font-medium">
+            {timeLeft.days === 1 ? "Day" : "Days"}
+          </span>
+        </div>
+        <p className="text-3xl ">:</p>
+        <div className="flex flex-col items-center ">
+          <h2 className="text-4xl">{timeLeft.hours}</h2>
+          <span className="font-medium">
+            {timeLeft.hours === "01" ? "Hour" : "Hours"}
+          </span>
+        </div>
+
+        <p className="text-3xl ">:</p>
+        <div className="flex flex-col items-center">
+          <h2 className="text-4xl">{timeLeft.minutes}</h2>
+          <span className="font-medium">
+            {timeLeft.minutes === "01" ? "Minute" : "Minutes"}
+          </span>
+        </div>
+
+        <p className="text-3xl ">:</p>
+        <div className="flex flex-col items-center">
+          <h2 className="text-4xl">{timeLeft.seconds}</h2>
+          <span className="font-medium">
+            {timeLeft.seconds === "01" ? "Second" : "Seconds"}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
+
