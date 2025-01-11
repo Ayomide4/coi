@@ -46,36 +46,36 @@ export default function CountdownDisplay() {
 
   return (
     <div className="text-center py-8 flex flex-col items-center justify-center ">
-      <h1 className=" text-3xl font-bold md:text-4xl">
+      <h1 className=" text-3xl font-bold md:text-5xl">
         Countdown to the Event:
       </h1>
       <div className="text-2xl font-semibold mt-4  flex gap-1  md:gap-4">
         <div className="flex flex-col items-center ">
-          <h2 className="text-4xl">{timeLeft.days}</h2>
-          <span className="font-medium">
+          <h2 className="text-4xl md:text-5xl">{timeLeft.days}</h2>
+          <span className="font-medium md:text-3xl">
             {timeLeft.days === 1 ? "Day" : "Days"}
           </span>
         </div>
-        <p className="text-3xl ">:</p>
+        <p className="text-3xl md:text-5xl">:</p>
         <div className="flex flex-col items-center ">
-          <h2 className="text-4xl">{timeLeft.hours}</h2>
-          <span className="font-medium">
+          <h2 className="text-4xl md:text-5xl">{timeLeft.hours}</h2>
+          <span className="font-medium  md:text-3xl">
             {timeLeft.hours === "01" ? "Hour" : "Hours"}
           </span>
         </div>
 
-        <p className="text-3xl ">:</p>
+        <p className="text-3xl md:text-5xl">:</p>
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl">{timeLeft.minutes}</h2>
-          <span className="font-medium">
+          <h2 className="text-4xl md:text-5xl">{timeLeft.minutes}</h2>
+          <span className="font-medium md:text-3xl">
             {timeLeft.minutes === "01" ? "Minute" : "Minutes"}
           </span>
         </div>
 
-        <p className="text-3xl ">:</p>
+        <p className="text-3xl md:text-5xl">:</p>
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl">{timeLeft.seconds}</h2>
-          <span className="font-medium">
+          <h2 className="text-4xl md:text-5xl">{timeLeft.seconds}</h2>
+          <span className="font-medium md:text-3xl">
             {timeLeft.seconds === "01" ? "Second" : "Seconds"}
           </span>
         </div>
@@ -83,4 +83,3 @@ export default function CountdownDisplay() {
     </div>
   );
 }
-
