@@ -52,7 +52,7 @@ export default function Home() {
           priority
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw"
-          className="w-full h-[70vh] object-cover md:h-[70vh] md:object-cover"
+          className="w-full h-[70vh] object-cover md:h-[70vh] md:object-cover z-0"
         />
       </div>
       <Quote />
