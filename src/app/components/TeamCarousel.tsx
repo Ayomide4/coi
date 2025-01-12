@@ -1,7 +1,8 @@
 "use client";
 
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { useRef, useEffect } from "react";
+
 interface TeamMember {
   name: string;
   role: string;
@@ -14,21 +15,46 @@ interface Props {
 
 export default function TeamCarousel({ team }: Props) {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   useEffect(() => {
     if (carouselRef.current) {
       const scrollWidth = carouselRef.current.scrollWidth;
       const clientWidth = carouselRef.current.clientWidth;
       carouselRef.current.scrollLeft = (scrollWidth - clientWidth) / 2;
     }
-  }, [team]); // Adjust if the team array changes
+  }, [team]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault(); // Prevent text selection
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust sensitivity (multiplier)
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
+
   const renderImages = team.map((member) => (
     <div id="team" key={member.name} className="min-w-[280px] mx-2">
-      <div className="w-[280px] h-[300px] md:w-[400px] md:h-[440px] relative overflow-hidden rounded-lg ">
+      <div className="w-[280px] h-[300px] md:w-[400px] md:h-[440px] relative overflow-hidden rounded-lg">
         <Image
           src={member.imageUrl || "/placeholder.jpg"}
           alt={`Image of ${member.name}`}
           className="w-full h-full object-cover"
           fill
+          draggable={false}
         />
         <div className="text-left mt-2 rounded-lg py-1 px-2 bg-[#151D1C] opacity-90 absolute bottom-2 left-1/2 transform -translate-x-1/2 w-[95%]">
           <h3 className="text-xl md:text-2xl font-semibold m-0 p-0">
@@ -42,8 +68,13 @@ export default function TeamCarousel({ team }: Props) {
 
   return (
     <div
-      className="overflow-x-auto whitespace-nowrap scrollbar-hide"
+      className="overflow-x-auto whitespace-nowrap scrollbar-hide cursor-grab"
       ref={carouselRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUpOrLeave}
+      onMouseLeave={handleMouseUpOrLeave}
+      style={{ userSelect: "none" }} // Prevents text selection
     >
       <div className="inline-flex">{renderImages}</div>
     </div>

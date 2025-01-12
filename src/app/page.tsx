@@ -1,5 +1,5 @@
 import Image from "next/image";
-import coi_bg from "../../public/assets/coi-bg-test.png";
+import coi_bg from "../../public/assets/coi-bg.jpg";
 import { Dela_Gothic_One, Sora } from "next/font/google";
 import Button from "./components/button";
 import Quote from "./components/quote";
@@ -25,22 +25,23 @@ const sora = Sora({
 
 export default function Home() {
   return (
-    <div className={`m-0 p-0 text-textColor`}>
+    <div className={`m-0 p-0 text-textColor `}>
       <div className="w-full h-[calc(100%-2rem)]  flex items-center">
+        <div className="absolute inset-0 bg-black opacity-20 z-0 h-[70vh]"></div>
         <div className="flex flex-col w-full absolute items-center justify-center">
           <h2 className={`${sora.className} text-4xl`}>Join us for</h2>
           <h1
-            className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter `}
+            className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter 2xl:text-7xl`}
           >
             CIRCLE OF INTIMACY
           </h1>
           <h1
-            className={`${headingFont.className} font-extrabold text-6xl tracking-tighter bg-gradient-to-r from-[#9EDCD7] from-80% to-[#2A847C] text-transparent bg-clip-text`}
+            className={`${headingFont.className} font-extrabold text-6xl tracking-tighter bg-gradient-to-r from-[#9EDCD7] from-80% to-[#2A847C] text-transparent bg-clip-text 2xl:text-8xl`}
           >
             2025
           </h1>
 
-          <div className="mt-10 md:w-72 ">
+          <div className="mt-10 md:w-72 2xl:w-96">
             <Button size={[22, 3]} text="LEARN MORE" url="/about" />
           </div>
         </div>
@@ -51,7 +52,7 @@ export default function Home() {
           priority
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw"
-          className="w-full h-[calc(100%-2rem)] object-cover md:h-[70vh] md:object-cover"
+          className="w-full h-[70vh] object-cover md:h-[70vh] md:object-cover"
         />
       </div>
       <Quote />

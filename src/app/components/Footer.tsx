@@ -42,8 +42,11 @@ export default function Footer() {
               <Link href="https://cash.app/$CircleOfIntimacy1" target="_blank">
                 <p className="text-xl font-light">Donate</p>
               </Link>
-              <a href="mailto:sikeomotosho@gmail.com">
-                <p className="text-xl font-light">Contact</p>
+              <a
+                href="mailto:sikeomotosho@gmail.com"
+                className="text-xl font-light"
+              >
+                Contact
               </a>
             </div>
             <div className="">
