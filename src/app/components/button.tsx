@@ -5,7 +5,7 @@ interface Props {
   url?: string;
 }
 
-export default function Button({ size, text, color, url }: Props) {
+export default function Button({ text, color, url }: Props) {
   return (
     <a href={url} className="cursor-pointer">
       <div

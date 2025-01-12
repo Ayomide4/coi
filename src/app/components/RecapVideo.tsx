@@ -1,10 +1,10 @@
 "use client";
-import { useState, useRef, RefObject } from "react";
+import { useState, useRef } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export default function RecapVideo() {
   const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null); // Explicitly typed as HTMLVideoElement
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -41,4 +41,3 @@ export default function RecapVideo() {
     </div>
   );
 }
-

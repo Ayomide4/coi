@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "./button";
 export default function ViewGallery() {
   return (
     <div className="px-4 space-y-4 bg-secondary py-8 ">
