@@ -25,13 +25,19 @@ const sora = Sora({
 
 export default function Home() {
   return (
-    <div className={`m-0 p-0 text-textColor `}>
-      <div className="w-full h-[calc(100%-2rem)]  flex items-center">
-        <div className="absolute inset-0 bg-black opacity-20 z-0 h-[70vh]"></div>
-        <div className="flex flex-col w-full absolute items-center justify-center">
-          <h2 className={`${sora.className} text-4xl`}>Join us for</h2>
+    <div className={`m-0 p-0 text-textColor`}>
+      {/* Header Section */}
+      <div className="w-full h-[70vh] relative flex items-center">
+        {/* Black Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
+
+        {/* Header Content */}
+        <div className="relative z-20 flex flex-col w-full items-center justify-center text-center">
+          <h2 className={`${sora.className} text-4xl text-white`}>
+            Join us for
+          </h2>
           <h1
-            className={`${headingFont.className} text-5xl font-bold text-center tracking-tighter 2xl:text-7xl`}
+            className={`${headingFont.className} text-5xl font-bold tracking-tighter text-white 2xl:text-7xl`}
           >
             CIRCLE OF INTIMACY
           </h1>
@@ -46,19 +52,22 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Background Image */}
         <Image
           src={coi_bg}
           alt="people worshiping inside a church"
           priority
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw"
-          className="w-full h-[70vh] object-cover md:h-[70vh] md:object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         />
       </div>
+
+      {/* Other Sections */}
       <Quote />
       <Vision />
       <RecapVideo />
-      <div className="hidden  text-3xl md:flex flex-col w-full items-center p-10 ">
+      <div className="hidden text-3xl md:flex flex-col w-full items-center p-10">
         <div className="bg-background items-center justify-center md:flex w-fit">
           <h2 className="w-fit font-inter mr-2">
             Celebrate your <span className="text-accent">faith</span>

@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${sourceSans3.className}   antialiased bg-background`}>
         <HamburgerMenu />
         <Navigation />
-        <div className="flex items-center absolute top-10 left-5 z-10">
+        <div className="flex items-center absolute top-10 left-5 z-20">
           <a target="_blank" href="https://www.instagram.com/circleofintimacy/">
             <Image
               src="/assets/Instagram.svg"

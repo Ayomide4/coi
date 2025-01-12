@@ -6,7 +6,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="absolute top-10 right-5 hidden md:block z-10">
+    <nav className="absolute top-10 right-5 hidden md:block z-20">
       <ul className="flex gap-4 text-xl font-light md:text-2xl">
         <li className="group">
           <Link href="/" className="relative inline-block">
