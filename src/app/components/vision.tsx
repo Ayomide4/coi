@@ -1,35 +1,38 @@
 import Image from "next/image";
-import vision from "../../../public/assets/vision.png";
+import vision from "../../../public/assets/kneel.jpg";
 import Button from "./button";
 
 export default function Vision() {
   //fix md img
   return (
-    <div className="relative md:bg-secondary  md:h-[42vh] lg:flex lg:items-center lg:justify-center lg:h-[70vh]">
-      <div className="relative md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full 2xl:w-4/6 2xl:p-0 ">
+    <div className="relative md:bg-secondary h-[60vh] md:h-[42vh] lg:flex lg:items-center lg:justify-center lg:h-[70vh]">
+      <div className="relative h-full md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full 2xl:w-4/6 2xl:p-0">
         <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
         <Image
-          src="/assets/kneel.jpg"
+          src={vision}
           alt="vision"
-          fill
-          className="absolute w-full h-full object-cover z-0  md:absolute md:w-96 md:h-[calc(50vh-12rem)]  md:top-8 md:right-8 lg:right-32  lg:w-[700px] lg:h-[500px]"
+          className="absolute w-full h-full object-cover z-0 
+            md:w-96 md:h-[26rem] md:-translate-y-1/2 md:top-1/2 md:right-10  lg:right-20
+              lg:w-[50%] lg:h-[80%]
+          xl:w-1/2"
         />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 2xl:w-full lg:w-1/2">
-          <h1 className="text-center text-4xl text-white mb-6 md:text-left 2xl:text-6xl">
+        <div className="relative  z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 2xl:w-full lg:w-1/2">
+          <h1 className="text-center text-4xl text-white  md:text-left 2xl:text-6xl">
             OUR VISION
           </h1>
-          <p className="text-center text-3xl text-white mb-4 max-w-4xl md:text-lg lg:text-2xl md:text-left 2xl:text-3xl 2xl:w-1/2 ">
-            Our vision is to see a generation pursuing Jesus, living as His
-            dwelling place, boldly sharing the gospel, and carrying His love to
-            the world.
-          </p>
-          <p className="text-center text-2xl text-white max-w-4xl mb-10 md:text-lg lg:text-2xl md:text-left 2xl:text-3xl 2xl:w-1/2 ">
-            To inspire intimacy with Jesus by fostering worship, prayer, and
-            obedience, helping people find purpose and fulfillment in Him. A
-            Space to experience Gods undiluted presence.
-          </p>
-
-          <div className="w-full md:w-72">
+          <div className="flex flex-col py-5 h-1/2 mb-10 ">
+            <p className="text-center text-xl text-white mb-8 max-w-4xl md:text-lg lg:text-2xl md:text-left 2xl:text-3xl  ">
+              Our vision is to see a generation pursuing Jesus, living as His
+              dwelling place, boldly sharing the gospel, and carrying His love
+              to the world.
+            </p>
+            <p className="text-center text-xl text-white max-w-4xl md:text-lg lg:text-2xl md:text-left 2xl:text-3xl  ">
+              To inspire intimacy with Jesus by fostering worship, prayer, and
+              obedience, helping people find purpose and fulfillment in Him. A
+              Space to experience Gods undiluted presence.
+            </p>
+          </div>
+          <div className="w-full md:w-72 xl:w-96">
             <Button size={[22, 3]} text="LEARN MORE" url="/about" />
           </div>
         </div>

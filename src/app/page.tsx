@@ -47,7 +47,7 @@ export default function Home() {
             2025
           </h1>
 
-          <div className="mt-10 md:w-72 2xl:w-96">
+          <div className="mt-10 w-72 md:w-72 2xl:w-96">
             <Button size={[22, 3]} text="LEARN MORE" url="/about" />
           </div>
         </div>
