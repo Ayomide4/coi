@@ -27,9 +27,9 @@ export default function Home() {
   return (
     <div className={`m-0 p-0 text-textColor`}>
       {/* Header Section */}
-      <div className="w-full h-[70vh] relative flex items-center">
+      <div className="w-full h-[70vh] lg:h-[95vh] relative flex items-center">
         {/* Black Overlay */}
-        <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
 
         {/* Header Content */}
         <div className="relative z-20 flex flex-col w-full items-center justify-center text-center">

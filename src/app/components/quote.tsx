@@ -1,7 +1,7 @@
 export default function Quote() {
   return (
-    <div className="bg-background h-72 p-8 md:flex md:justify-center md:items-center">
-      <div className="flex flex-col relative  z-20 md:w-full 2xl:w-4/6">
+    <div className="bg-background h-72 p-8 md:flex md:justify-center md:items-center lg:px-20">
+      <div className="flex flex-col relative  z-20 md:w-full 2xl:w-4/6 ">
         <h1 className="text-3xl mb-0 z-20 mt-10 md:font-semibold md:text-4xl">
           Draw near to God, and he will draw near to you.
         </h1>

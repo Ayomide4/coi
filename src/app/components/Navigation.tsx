@@ -7,9 +7,9 @@ export default function Navigation() {
 
   return (
     <nav className="absolute top-10 right-5 hidden md:block z-20">
-      <ul className="flex gap-4 text-xl font-light md:text-2xl">
-        <li className="group">
-          <Link href="/" className="relative inline-block">
+      <ul className="flex gap-4 text-xl font-medium md:text-2xl ">
+        <li className="group ">
+          <Link href="/" className="relative inline-block ">
             Home
             <span
               className={`absolute -bottom-1 left-0 w-full h-0.5 bg-white transform origin-left transition-all duration-300 ease-out

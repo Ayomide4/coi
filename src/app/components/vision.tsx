@@ -7,10 +7,12 @@ export default function Vision() {
   return (
     <div className="relative md:bg-secondary  md:h-[42vh] lg:flex lg:items-center lg:justify-center lg:h-[70vh]">
       <div className="relative md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full 2xl:w-4/6 2xl:p-0 ">
+        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
         <Image
-          src={vision}
+          src="/assets/kneel.jpg"
           alt="vision"
-          className="absolute w-full h-full object-cover z-0  md:absolute md:w-96 md:h-[calc(50vh-12rem)]  md:top-8 md:right-8 lg:w-[600px] lg:h-4/5"
+          fill
+          className="absolute w-full h-full object-cover z-0  md:absolute md:w-96 md:h-[calc(50vh-12rem)]  md:top-8 md:right-8 lg:right-32  lg:w-[700px] lg:h-[500px]"
         />
         <div className="relative z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 2xl:w-full lg:w-1/2">
           <h1 className="text-center text-4xl text-white mb-6 md:text-left 2xl:text-6xl">
