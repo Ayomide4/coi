@@ -5,7 +5,7 @@ import Button from "./button";
 export default function Vision() {
   //fix md img
   return (
-    <div className="relative md:bg-secondary h-[80vh] md:h-[42vh] lg:flex lg:items-center lg:justify-center lg:h-[70vh]">
+    <div className="relative md:bg-secondary h-[100vh] md:h-[42vh] lg:flex lg:items-center lg:justify-center lg:h-[70vh]">
       <div className="relative h-full md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full 2xl:w-4/6 2xl:p-0">
         <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
         <Image
