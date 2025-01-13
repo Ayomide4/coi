@@ -16,7 +16,7 @@ export default function Vision() {
               lg:w-[50%] lg:h-[80%]
           xl:w-1/2"
         />
-        <div className="relative  z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 2xl:w-full lg:w-1/2">
+        <div className=" relative z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 2xl:w-full lg:w-1/2">
           <h1 className="text-center text-4xl text-white  md:text-left 2xl:text-6xl">
             OUR VISION
           </h1>
@@ -32,7 +32,7 @@ export default function Vision() {
               Space to experience Gods undiluted presence.
             </p>
           </div>
-          <div className="w-full md:w-72 xl:w-96">
+          <div className="w-full md:w-60 lg:w-80 xl:w-96">
             <Button size={[22, 3]} text="LEARN MORE" url="/about" />
           </div>
         </div>
