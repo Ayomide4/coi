@@ -5,7 +5,8 @@ import { toast } from "react-toastify";
 import CountdownDisplay from "./Countdown";
 
 export default function EventCountdown() {
-  //TODO:  add countdown and registration link
+  //TODO:  registration link
+  // FIX: images on 1440
   const notify = () => toast("Registration will open soon!");
   return (
     <div className="px-4 bg-background py-4 w-full min-h-[900px] relative flex flex-col items-center justify-center">

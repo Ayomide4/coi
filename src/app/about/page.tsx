@@ -102,8 +102,9 @@ export default function About() {
           </h2>
           <div className="space-y-4  text-lg flex flex-col items-center">
             <p className="text-lg md:text-xl">
-              Circle of Intimacy exists to facilitate life-changing encounters
-              with God by creating sacred spaces where His presence can dwell.
+              Circle of Intimacy is a nonprofit organization that exists to
+              facilitate life-changing encounters with God by creating sacred
+              spaces where His presence can dwell.
             </p>
             <p className="text-lg md:text-xl">
               Through worship, prayer, and intentional gatherings, we seek to

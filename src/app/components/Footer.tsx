@@ -84,7 +84,16 @@ export default function Footer() {
       <div className="md:px-4 w-full ">
         <div className="border-b-2 border-textColor w-full my-4"></div>
         <div className="flex justify-between items-center">
-          <p className="font-bold">Copyright @ {currentYear}</p>
+          <p className="font-bold text-sm">
+            © {currentYear} COI. All rights reserved.
+          </p>
+          <p className="hidden md:block">
+            Designed and Created by{" "}
+            <a href="mailto:info@lonestarwebstudio.com">
+              <span className="underline">Lone Star Web Studio</span>
+            </a>
+          </p>
+
           <div
             className="flex items-center cursor-pointer"
             onClick={scrollToTop}
