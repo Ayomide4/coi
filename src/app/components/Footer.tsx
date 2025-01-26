@@ -73,6 +73,12 @@ export default function Footer() {
               />
             </div>
           </div>
+          <p className="block md:hidden">
+            Designed and Created by{" "}
+            <a href="mailto:info@lonestarwebstudio.com">
+              <span className="underline">Lone Star Web Studio</span>
+            </a>
+          </p>
         </div>
       </div>
       <div className="md:px-4 w-full ">

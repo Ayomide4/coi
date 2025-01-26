@@ -49,14 +49,13 @@ export default function CountdownDisplay() {
       <h1 className=" text-3xl font-bold md:text-5xl">
         Countdown to the Event:
       </h1>
-      <div className="text-2xl font-semibold mt-4  flex gap-1  md:gap-4">
+      <div className="text-2xl font-semibold mt-4  flex gap-3  md:gap-6">
         <div className="flex flex-col items-center ">
           <h2 className="text-4xl md:text-5xl">{timeLeft.days}</h2>
           <span className="font-medium md:text-3xl">
             {timeLeft.days === 1 ? "Day" : "Days"}
           </span>
         </div>
-        <p className="text-3xl md:text-5xl">:</p>
         <div className="flex flex-col items-center ">
           <h2 className="text-4xl md:text-5xl">{timeLeft.hours}</h2>
           <span className="font-medium  md:text-3xl">
@@ -64,7 +63,6 @@ export default function CountdownDisplay() {
           </span>
         </div>
 
-        <p className="text-3xl md:text-5xl">:</p>
         <div className="flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl">{timeLeft.minutes}</h2>
           <span className="font-medium md:text-3xl">
@@ -72,7 +70,6 @@ export default function CountdownDisplay() {
           </span>
         </div>
 
-        <p className="text-3xl md:text-5xl">:</p>
         <div className="flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl">{timeLeft.seconds}</h2>
           <span className="font-medium md:text-3xl">
