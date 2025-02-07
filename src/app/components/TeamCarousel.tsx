@@ -2,11 +2,14 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import TeamMemberModal from "./TeamMemberModal";
 
 interface TeamMember {
   name: string;
   role: string;
   imageUrl: string;
+  description?: string;
+  contactInfo?: string;
 }
 
 interface Props {
@@ -18,6 +21,8 @@ export default function TeamCarousel({ team }: Props) {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -46,9 +51,17 @@ export default function TeamCarousel({ team }: Props) {
     setIsDragging(false);
   };
 
+  const handleImageClick = (member: TeamMember) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+  };
+
   const renderImages = team.map((member) => (
     <div id="team" key={member.name} className="min-w-[280px] mx-2">
-      <div className="w-[280px] h-[300px] md:w-[400px] md:h-[440px] relative overflow-hidden ">
+      <div
+        className="w-[280px] h-[300px] md:w-[400px] md:h-[440px] relative overflow-hidden cursor-pointer"
+        onClick={() => handleImageClick(member)}
+      >
         <Image
           src={member.imageUrl || "/placeholder.jpg"}
           alt={`Image of ${member.name}`}
@@ -66,19 +79,24 @@ export default function TeamCarousel({ team }: Props) {
     </div>
   ));
 
-  //TODO: click picture to open card modal
-
   return (
-    <div
-      className="overflow-x-auto whitespace-nowrap scrollbar-hide cursor-grab"
-      ref={carouselRef}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUpOrLeave}
-      onMouseLeave={handleMouseUpOrLeave}
-      style={{ userSelect: "none" }} // Prevents text selection
-    >
-      <div className="inline-flex">{renderImages}</div>
-    </div>
+    <>
+      <div
+        className="overflow-x-auto whitespace-nowrap scrollbar-hide cursor-grab"
+        ref={carouselRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUpOrLeave}
+        onMouseLeave={handleMouseUpOrLeave}
+        style={{ userSelect: "none" }} // Prevents text selection
+      >
+        <div className="inline-flex">{renderImages}</div>
+      </div>
+      <TeamMemberModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        member={selectedMember}
+      />
+    </>
   );
 }
