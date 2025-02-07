@@ -1,5 +1,5 @@
 import Image from "next/image";
-import coi_bg from "../../public/assets/coi-bg.jpg";
+import coi_bg from "../../public/coi-bg.jpg";
 import { Dela_Gothic_One, Sora } from "next/font/google";
 import Button from "./components/button";
 import Quote from "./components/quote";
@@ -15,6 +15,8 @@ const headingFont = Dela_Gothic_One({
   weight: "400",
   display: "swap",
 });
+
+//TODO: click picture to open card modal
 
 const sora = Sora({
   subsets: ["latin"],
@@ -72,12 +74,7 @@ export default function Home() {
           <h2 className="w-fit font-inter mr-2">
             Celebrate your <span className="text-accent">faith</span>
           </h2>
-          <Image
-            src="/assets/diamond.svg"
-            alt="diamond svg"
-            width={10}
-            height={10}
-          />
+          <Image src="/diamond.svg" alt="diamond svg" width={10} height={10} />
           <h2 className="ml-2">
             <span className="text-accent">Expressed</span>
           </h2>
@@ -85,8 +82,8 @@ export default function Home() {
         <h2 className="w-fit font-inter">in your own terms</h2>
       </div>
       <div className="lg:flex">
-        <StoreCard imageURL="/assets/store-img-1.jpg" firstImage={true} />
-        <StoreCard imageURL="/assets/store-img-2.jpg" firstImage={false} />
+        <StoreCard imageURL="/store-img-1.jpg" firstImage={true} />
+        <StoreCard imageURL="/store-img-2.jpg" firstImage={false} />
       </div>
       <ViewGallery />
       <EventCountdown />

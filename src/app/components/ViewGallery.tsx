@@ -6,7 +6,7 @@ export default function ViewGallery() {
       {/* Image 1 */}
       <div className="relative w-full h-0 pb-[100%] mb-4 md:mb-0">
         <Image
-          src="/assets/coi-gallery-4.jpg"
+          src="/coi-gallery-4.jpg"
           alt="group photo"
           fill
           className="object-cover "
@@ -16,7 +16,7 @@ export default function ViewGallery() {
       {/* Image 2 */}
       <div className="relative w-full h-0 pb-[100%] mb-4 md:mb-0">
         <Image
-          src="/assets/coi-gallery-5.jpg"
+          src="/coi-gallery-5.jpg"
           alt="group photo"
           fill
           className="object-cover "
@@ -26,7 +26,7 @@ export default function ViewGallery() {
       {/* Image 3 */}
       <div className="relative w-full h-0 pb-[100%] mb-4 md:mb-0">
         <Image
-          src="/assets/coi-gallery-3.jpg"
+          src="/coi-gallery-3.jpg"
           alt="group photo"
           fill
           className="object-cover "
@@ -36,7 +36,7 @@ export default function ViewGallery() {
       {/* Image 4 */}
       <div className="relative w-full h-0 pb-[100%] hidden md:block">
         <Image
-          src="/assets/coi-gallery-1.jpg"
+          src="/coi-gallery-1.jpg"
           alt="group photo"
           fill
           className="object-cover "
@@ -46,7 +46,7 @@ export default function ViewGallery() {
       {/* Image 5 */}
       <div className="relative w-full h-0 pb-[100%] hidden md:block">
         <Image
-          src="/assets/coi-gallery-2.jpg"
+          src="/coi-gallery-2.jpg"
           alt="group photo"
           fill
           className="object-cover "
@@ -56,7 +56,7 @@ export default function ViewGallery() {
       {/* Image 6 */}
       <div className="relative w-full h-0 pb-[100%] hidden md:block">
         <Image
-          src="/assets/coi-gallery-6.jpg"
+          src="/coi-gallery-6.jpg"
           alt="group photo"
           fill
           className="object-cover "

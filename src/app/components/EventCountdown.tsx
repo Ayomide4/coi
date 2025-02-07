@@ -16,7 +16,7 @@ export default function EventCountdown() {
       <div className="w-full min-h-[700px] relative flex flex-col items-center mt-6  2xl:min-h-[1000px] 2xl:mb-40">
         <div className="absolute top-32 w-5/6 h-[400px] md:w-3/4 lg:w-2/3 2xl:h-full ">
           <Image
-            src="/assets/coi-footer-3.jpg"
+            src="/coi-footer-3.jpg"
             fill
             alt="image from circle of intimacy 2024"
             className="object-cover"
@@ -24,7 +24,7 @@ export default function EventCountdown() {
         </div>
         <div className="absolute top-0 right-0 w-40 h-80 md:w-60 md:right-10 lg:right-12 lg:w-64 2xl:h-3/4 2xl:w-[500px]">
           <Image
-            src="/assets/coi-footer-1.jpg"
+            src="/coi-footer-1.jpg"
             fill
             alt="image from circle of intimacy 2024"
             className="object-cover"
@@ -32,7 +32,7 @@ export default function EventCountdown() {
         </div>
         <div className="absolute left-0 bottom-0 w-44 h-72 md:left-10 md:bottom-10 md:w-60 lg:w-64 lg:h-80 lg:bottom-8 2xl:h-3/4 2xl:w-[500px] 2xl:-bottom-60">
           <Image
-            src="/assets/coi-footer-2.jpg"
+            src="/coi-footer-2.jpg"
             fill
             alt="image from circle of intimacy 2024"
             className="object-cover"

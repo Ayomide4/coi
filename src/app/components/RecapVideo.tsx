@@ -23,7 +23,7 @@ export default function RecapVideo() {
         muted
         playsInline
       >
-        <source src="/assets/coi-recap.mp4" type="video/mp4" />
+        <source src="/coi-recap.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

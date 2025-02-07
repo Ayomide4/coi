@@ -7,58 +7,58 @@ export default function About() {
     {
       name: "Sikemi Omotosho",
       role: "Lead Servant",
-      imageUrl: "/assets/Sikemi.JPG",
+      imageUrl: "/Sikemi.JPG",
     },
 
     {
       name: "Crystal Oparaji",
       role: "Executive Assistant",
-      imageUrl: "/assets/Crystal.jpeg",
+      imageUrl: "/Crystal.jpeg",
     },
     {
       name: "Tope Pecku",
       role: "Event Experience Coordinator",
-      imageUrl: "/assets/Tope.jpg",
+      imageUrl: "/Tope.jpg",
     },
     {
       name: "Abiodun Adejumobi",
       role: "Ministerial Care Coordinator",
-      imageUrl: "/assets/Abi.jpg",
+      imageUrl: "/Abi.jpg",
     },
     {
       name: "Emmanuel Doku",
       role: "Media & Design Coordinator",
-      imageUrl: "/assets/Doku.jpg",
+      imageUrl: "/Doku.jpg",
     },
     {
       name: "Temi Omotayo",
       role: "Media & Design Coordinator",
-      imageUrl: "/assets/Temi.jpg",
+      imageUrl: "/Temi.jpg",
     },
     {
       name: "Angel Oyeniya",
       role: "Marketing Coordinator",
-      imageUrl: "/assets/Angel.jpg",
+      imageUrl: "/Angel.jpg",
     },
     {
       name: "Michael Arthur",
       role: "Merchandise & Branding Coordinator",
-      imageUrl: "/assets/Michael.jpg",
+      imageUrl: "/Michael.jpg",
     },
     {
       name: "Ayomide Ifanse",
       role: "Live stream & Broadcast Coordinator",
-      imageUrl: "/assets/AyoIfanse.JPG",
+      imageUrl: "/AyoIfanse.JPG",
     },
     {
       name: "Subomi Borishade",
       role: "Streamline Coordinator",
-      imageUrl: "/assets/Subomi.jpg",
+      imageUrl: "/Subomi.jpg",
     },
     {
       name: "Joshua Fakuade",
       role: "Worship Production Coordinator",
-      imageUrl: "/assets/Joshua.jpg",
+      imageUrl: "/Joshua.jpg",
     },
   ];
 
@@ -89,7 +89,7 @@ export default function About() {
           </div>
           <div className="relative w-full h-[500px] md:mt-10">
             <Image
-              src="/assets/coi-img.jpg"
+              src="/coi-img.jpg"
               alt="image of people worshiping"
               className="object-cover"
               fill
@@ -128,7 +128,7 @@ export default function About() {
           </div>
           <div className="relative w-full h-[500px] md:mt-10 hidden md:block">
             <Image
-              src="/assets/coi-team1.jpg"
+              src="/coi-team1.jpg"
               alt="image of people worshiping"
               className="object-cover"
               fill

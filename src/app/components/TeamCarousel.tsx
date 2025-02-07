@@ -66,6 +66,8 @@ export default function TeamCarousel({ team }: Props) {
     </div>
   ));
 
+  //TODO: click picture to open card modal
+
   return (
     <div
       className="overflow-x-auto whitespace-nowrap scrollbar-hide cursor-grab"

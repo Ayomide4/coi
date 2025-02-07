@@ -1,5 +1,4 @@
 import Image from "next/image";
-import vision from "../../../public/assets/kneel.jpg";
 import Button from "./button";
 
 export default function Vision() {
@@ -9,7 +8,7 @@ export default function Vision() {
       <div className="relative h-full md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full 2xl:w-4/6 2xl:p-0">
         <div className="md:opacity-0 absolute inset-0 bg-black opacity-20 z-10"></div>
         <Image
-          src={vision}
+          src="/kneel.jpg"
           alt="vision"
           className="absolute w-full h-full object-cover z-0 
             md:w-96 md:h-[26rem] md:-translate-y-1/2 md:top-1/2 md:right-10  lg:right-20

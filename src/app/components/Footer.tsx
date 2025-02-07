@@ -15,7 +15,7 @@ export default function Footer() {
       <div className=" p-4 w-full flex  flex-col md:flex-row items-center md:justify-between lg:w-4/5">
         <div className="w-52 relative h-44 hidden md:block ">
           <Image
-            src="/assets/coi-logo.svg"
+            src="coi-logo.svg"
             alt="Circle of Intimacy Logo"
             fill
             className="object-contain"
@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
             <div className="w-full relative h-32 md:hidden">
               <Image
-                src="/assets/coi-logo.svg"
+                src="coi-logo.svg"
                 alt="Circle of Intimacy Logo"
                 fill
                 className="object-contain"
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
           <p className="block md:hidden">
             Designed and Created by{" "}
-            <a href="mailto:info@lonestarwebstudio.com">
+            <a href="mailto:info@lonestarwebstudio.com" target="_blank">
               <span className="underline">Lone Star Web Studio</span>
             </a>
           </p>
@@ -89,7 +89,7 @@ export default function Footer() {
           </p>
           <p className="hidden md:block">
             Designed and Created by{" "}
-            <a href="mailto:info@lonestarwebstudio.com">
+            <a href="mailto:info@lonestarwebstudio.com" target="_blank">
               <span className="underline">Lone Star Web Studio</span>
             </a>
           </p>
@@ -100,7 +100,7 @@ export default function Footer() {
           >
             <p className="mr-2 font-bold">Back to top</p>
             <Image
-              src="/assets/arrowUp.svg"
+              src="arrowUp.svg"
               width={25}
               height={25}
               alt="arrow up"
