@@ -142,7 +142,7 @@ export default function About() {
     {
       name: "Temi Taiwo",
       role: "Financial Coordinator",
-      imageUrl: "/TemiTaiwo.jpeg", // Add the correct image URL
+      imageUrl: "/TemiTaiwo.jpg", // Add the correct image URL
       born: "Lagos, Nigeria",
       raised: "Garland, Texas",
       description:
@@ -153,7 +153,7 @@ export default function About() {
     {
       name: "Julia Ukattah",
       role: "Worship Production Coordinator",
-      imageUrl: "/JuliaUkattah.jpeg", // Add the correct image URL
+      imageUrl: "/JuliaUkattah.jpg", // Add the correct image URL
       born: "", // Add born information if available
       raised: "", // Add raised information if available
       description:
