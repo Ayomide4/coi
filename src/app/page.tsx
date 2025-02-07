@@ -35,11 +35,11 @@ export default function Home() {
 
         {/* Header Content */}
         <div className="relative z-20 flex flex-col w-full items-center justify-center text-center">
-          <h2 className={`${sora.className} text-4xl text-white`}>
+          <h2 className={`${sora.className} text-2xl text-white md:text-4xl`}>
             Join us for
           </h2>
           <h1
-            className={`${headingFont.className} text-5xl font-bold tracking-tighter text-white 2xl:text-7xl`}
+            className={`${headingFont.className} text-4xl md:text-5xl font-bold tracking-tighter text-white 2xl:text-7xl`}
           >
             CIRCLE OF INTIMACY
           </h1>
