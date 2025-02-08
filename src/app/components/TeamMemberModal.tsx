@@ -52,11 +52,11 @@ export default function TeamMemberModal({ isOpen, onClose, member }: Props) {
         {/*     <span className="font-semibold">Raised:</span> {member.raised} */}
         {/*   </p> */}
         {/* )} */}
-        {member.phone && (
-          <p className="mt-2">
-            <span className="font-bold">Phone:</span> {member.phone}
-          </p>
-        )}
+        {/* {member.phone && ( */}
+        {/*   <p className="mt-2"> */}
+        {/*     <span className="font-bold">Phone:</span> {member.phone} */}
+        {/*   </p> */}
+        {/* )} */}
         {member.email && (
           <p className="mt-1">
             <span className="font-bold">Email:</span> {member.email}

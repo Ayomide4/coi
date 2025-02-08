@@ -28,6 +28,17 @@ export default function About() {
       email: "Crystaloparaji@gmail.com",
     },
     {
+      name: "Temi Taiwo",
+      role: "Financial Coordinator",
+      imageUrl: "/TemiTaiwo.jpg", // Add the correct image URL
+      born: "Lagos, Nigeria",
+      raised: "Garland, Texas",
+      description:
+        "Temi Taiwo has a passion for promoting financial stewardship and accountability. As the Financial Coordinator for the Circle of Intimacy (COI), Temi manages budgeting, oversees financial operations, and ensures accurate reporting to support the program's goals.",
+      phone: "(214) 604 0708",
+      email: "Temit@gmail.com",
+    },
+    {
       name: "Dewa Salau",
       role: "Prayer Lead",
       imageUrl: "/DewaSalau.jpg", // Add the correct image URL
@@ -35,6 +46,7 @@ export default function About() {
       raised: "Upper Marlboro, Maryland",
       description:
         "Dewa Salau has a passion for fostering a deep connection with God through prayer and intercession. As the Prayer Lead for the Circle of Intimacy (COI) program, Dewa ensures every aspect of the event is covered in prayer, creating a spiritually enriching atmosphere for participants.",
+      email: "dewasalau@gmail.com",
     },
     {
       name: "Ayomide Ifanse",
@@ -139,17 +151,7 @@ export default function About() {
       email: "J.Taiwoz@gmail.com",
       imagePosition: "center 30%",
     },
-    {
-      name: "Temi Taiwo",
-      role: "Financial Coordinator",
-      imageUrl: "/TemiTaiwo.jpg", // Add the correct image URL
-      born: "Lagos, Nigeria",
-      raised: "Garland, Texas",
-      description:
-        "Temi Taiwo has a passion for promoting financial stewardship and accountability. As the Financial Coordinator for the Circle of Intimacy (COI), Temi manages budgeting, oversees financial operations, and ensures accurate reporting to support the program's goals.",
-      phone: "(214) 604 0708",
-      email: "Temit@gmail.com",
-    },
+
     {
       name: "Julia Ukattah",
       role: "Worship Production Coordinator",
