@@ -1,4 +1,3 @@
-// app/api/create-payment-intent/route.ts
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
@@ -13,6 +12,13 @@ export async function POST(request: Request) {
     // Validate the amount
     if (typeof amount !== "number" || amount <= 0) {
       return NextResponse.json({ error: "Invalid amount" }, { status: 400 });
+    }
+
+    if (amount < 1 || amount > 10000) {
+      return NextResponse.json(
+        { error: "Donation amount must be between $1 and $10,000." },
+        { status: 400 },
+      );
     }
 
     console.log("Creating PaymentIntent for amount:", amount);

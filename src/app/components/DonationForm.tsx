@@ -5,7 +5,8 @@ import { useState, FormEvent } from "react";
 export default function DonationForm() {
   const stripe = useStripe();
   const elements = useElements();
-  const [amount, setAmount] = useState<number>(10); // Default donation amount
+  const [amount, setAmount] = useState<string>(""); // Store as string to prevent premature conversions
+  const [success, setSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -16,8 +17,15 @@ export default function DonationForm() {
       return;
     }
 
+    const numericAmount = parseFloat(amount); // Convert to a number
+    if (isNaN(numericAmount) || numericAmount <= 0) {
+      setError("Please enter a valid donation amount.");
+      return;
+    }
+
     setLoading(true);
     setError(null);
+    setSuccess(false); // Reset success state
 
     try {
       // Create a PaymentIntent on the server
@@ -26,8 +34,13 @@ export default function DonationForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ amount: amount * 100 }), // Convert to cents
+        body: JSON.stringify({ amount: numericAmount }), // Convert to cents
       });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to create PaymentIntent.");
+      }
 
       const { clientSecret } = await response.json();
 
@@ -40,12 +53,14 @@ export default function DonationForm() {
         return;
       }
 
-      const { error: stripeError, paymentIntent } =
-        await stripe.confirmCardPayment(clientSecret, {
+      const { error: stripeError } = await stripe.confirmCardPayment(
+        clientSecret,
+        {
           payment_method: {
             card: cardElement,
           },
-        });
+        },
+      );
 
       if (stripeError) {
         setError(stripeError.message || "An error occurred.");
@@ -54,11 +69,16 @@ export default function DonationForm() {
       }
 
       // Payment succeeded
-      alert(`Payment successful! ID: ${paymentIntent?.id}`);
-      setLoading(false);
+      setSuccess(true);
+      setAmount(""); // Reset the input field after a successful donation
     } catch (err) {
-      setError("An error occurred. Please try again.");
-      setLoading(false);
+      setError(
+        err instanceof Error
+          ? err.message
+          : "An error occurred. Please try again.",
+      );
+    } finally {
+      setLoading(false); // Reset loading state
     }
   };
 
@@ -66,22 +86,21 @@ export default function DonationForm() {
   const cardElementOptions = {
     style: {
       base: {
-        color: "#ffffff", // White text color
+        color: "#ffffff",
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: "antialiased",
         fontSize: "16px",
         "::placeholder": {
-          color: "#a0aec0", // Placeholder text color
+          color: "#a0aec0",
         },
       },
       invalid: {
-        color: "#e53e3e", // Red text color for invalid input
-        iconColor: "#e53e3e", // Red icon color for invalid input
+        color: "#e53e3e",
+        iconColor: "#e53e3e",
       },
     },
   };
 
-  //FIX: fix how much is donated
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <div className="mb-4">
@@ -89,9 +108,14 @@ export default function DonationForm() {
         <input
           type="number"
           value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
+          onChange={(e) => {
+            setAmount(e.target.value);
+            setSuccess(false); // Reset success state when the amount changes
+          }}
           className="w-full p-2 border rounded text-black"
           min="1"
+          step="1" // Allows decimal input
+          placeholder="Enter amount"
           required
         />
       </div>
@@ -102,6 +126,12 @@ export default function DonationForm() {
           options={cardElementOptions}
         />
       </div>
+
+      {success && (
+        <p className="text-green-500 mb-4">
+          Your payment was successfully sent
+        </p>
+      )}
       {error && <p className="text-red-500 mb-4">{error}</p>}
       <button
         type="submit"
