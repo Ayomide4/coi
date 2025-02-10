@@ -1,3 +1,4 @@
+import Head from "next/head";
 import TeamCarousel from "../components/TeamCarousel";
 import Image from "next/image";
 import TeamImage from "../components/TeamImage";
@@ -167,6 +168,13 @@ export default function About() {
   ];
   return (
     <div className="bg-[#081211] text-textColor">
+      <Head>
+        <title>About Circle of Intimacy - Our Mission and Values</title>
+        <meta
+          name="description"
+          content="Learn about the team behind Circle of Intimacy and our commitment to helping people build stronger relationships with Christ."
+        />
+      </Head>
       <main>
         <section className="text-center p-4 mb-4 md:mb-10">
           <h1 className="text-4xl md:text-5xl font-semibold mb-8 mt-24">
@@ -193,7 +201,7 @@ export default function About() {
           <div className="relative w-full h-[500px] md:mt-10">
             <Image
               src="/coi-img.jpg"
-              alt="image of people worshiping"
+              alt="Worship at Circle of Intimacy 2024"
               className="object-cover"
               fill
             />
@@ -232,7 +240,7 @@ export default function About() {
           <div className="relative w-full h-[500px] md:mt-10 hidden md:block">
             <Image
               src="/coi-team1.jpg"
-              alt="image of people worshiping"
+              alt="Worship at Circle of Intimacy 2024"
               className="object-cover"
               fill
             />

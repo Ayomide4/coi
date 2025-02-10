@@ -1,12 +1,9 @@
 "use client";
 import Image from "next/image";
 import Button from "./button";
-import { toast } from "react-toastify";
 import CountdownDisplay from "./Countdown";
 
 export default function EventCountdown() {
-  //TODO:  registration link
-  const notify = () => toast("Registration will open soon!");
   return (
     <div className="px-4 bg-background py-4 w-full min-h-[900px] relative flex flex-col items-center justify-center">
       <h1 className="text-5xl font-bold text-center md:mt-10">
@@ -42,14 +39,12 @@ export default function EventCountdown() {
 
       <CountdownDisplay />
       <div className="w-full md:flex md:items-center md:justify-center">
-        <div
-          onClick={notify}
-          className="w-full md:w-96 md:self-center cursor-pointer "
-        >
+        <div className="w-full md:w-96 md:self-center cursor-pointer ">
           <Button
             size={[22, 2.5]}
-            text="Register Now"
+            text="REGISTER NOW"
             color="bg-backgroundGreen"
+            url="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience"
           />
         </div>
       </div>

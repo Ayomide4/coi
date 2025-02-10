@@ -7,7 +7,7 @@ export default function ViewGallery() {
       <div className="relative w-full h-0 pb-[100%] mb-4 md:mb-0">
         <Image
           src="/coi-gallery-4.jpg"
-          alt="group photo"
+          alt="Photo from Circle of Intimacy 2024"
           fill
           className="object-cover "
         />
@@ -17,7 +17,7 @@ export default function ViewGallery() {
       <div className="relative w-full h-0 pb-[100%] mb-4 md:mb-0">
         <Image
           src="/coi-gallery-5.jpg"
-          alt="group photo"
+          alt="Circle of Intimacy 2024 gallery image"
           fill
           className="object-cover "
         />
@@ -27,7 +27,7 @@ export default function ViewGallery() {
       <div className="relative w-full h-0 pb-[100%] mb-4 md:mb-0">
         <Image
           src="/coi-gallery-3.jpg"
-          alt="group photo"
+          alt="Praise and worship from Circle of Intimacy 2024"
           fill
           className="object-cover "
         />
@@ -37,7 +37,7 @@ export default function ViewGallery() {
       <div className="relative w-full h-0 pb-[100%] hidden md:block">
         <Image
           src="/coi-gallery-1.jpg"
-          alt="group photo"
+          alt="Circle of Intimacy 2024 gallery image"
           fill
           className="object-cover "
         />
@@ -47,7 +47,7 @@ export default function ViewGallery() {
       <div className="relative w-full h-0 pb-[100%] hidden md:block">
         <Image
           src="/coi-gallery-2.jpg"
-          alt="group photo"
+          alt="Circle of Intimacy 2024 gallery image"
           fill
           className="object-cover "
         />
@@ -57,7 +57,7 @@ export default function ViewGallery() {
       <div className="relative w-full h-0 pb-[100%] hidden md:block">
         <Image
           src="/coi-gallery-6.jpg"
-          alt="group photo"
+          alt="Circle of Intimacy 2024 gallery image"
           fill
           className="object-cover "
         />

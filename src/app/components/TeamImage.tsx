@@ -31,7 +31,7 @@ export default function TeamImage() {
     <div className="relative w-full h-[500px] overflow-hidden  md:mt-10">
       <Image
         src="/coi-team1.jpg"
-        alt="image of people worshiping"
+        alt="Worship at Circle of Intimacy 2024"
         className="object-cover transition-all duration-500"
         style={{ objectPosition: getObjectPosition() }}
         fill

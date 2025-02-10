@@ -34,7 +34,7 @@ export default function TeamMemberModal({ isOpen, onClose, member }: Props) {
         <div className="relative w-full h-64">
           <Image
             src={member.imageUrl}
-            alt={`Image of ${member.name}`}
+            alt={`Image of ${member.name}, Circle of Intimacy team member`}
             className="object-cover rounded-t-lg"
             fill
             style={{ objectPosition: member.imagePosition || "center" }} // Use custom position if available

@@ -29,7 +29,7 @@ export default function RootLayout({
               src="Instagram.svg"
               width={40}
               height={40}
-              alt="Instagram icon"
+              alt="Circle of Intimacy Instagram"
               className="mr-2"
             />
           </a>

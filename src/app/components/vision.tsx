@@ -7,7 +7,7 @@ export default function Vision() {
       <div className="relative h-full md:w-full md:p-10 lg:px-20 lg:py-0 lg:h-full 2xl:w-4/6 2xl:p-0">
         <div className=" absolute inset-0 bg-black opacity-20 z-10"></div>
 
-        <Image src="/kneel.jpg" alt="vision" fill className="object-cover" />
+        <Image src="/kneel.jpg" alt="Man worshiping at Circle of Intimacy event" fill className="object-cover" />
 
         <div className=" relative z-10 flex flex-col items-center justify-center h-full p-8  md:items-start md:w-96 md:bg-none md:p-0 2xl:w-full lg:w-1/2">
           <h1 className="text-center text-4xl text-white  md:text-left 2xl:text-6xl">

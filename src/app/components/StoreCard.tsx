@@ -11,7 +11,7 @@ export default function StoreCard({ imageURL, firstImage }: Props) {
     <div className="relative h-[600px] w-full lg:h-[800px] 2xl:h-[1000px]">
       <Image
         src={imageURL}
-        alt="store image"
+        alt="Circle of Intimacy merchandise"
         width={500}
         height={600}
         className="absolute w-full h-full z-0 object-cover lg:object-cover "
