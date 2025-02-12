@@ -4,6 +4,7 @@ import Button from "./button";
 import CountdownDisplay from "./Countdown";
 
 export default function EventCountdown() {
+  //TODO:  registration link
   return (
     <div className="px-4 bg-background py-4 w-full min-h-[900px] relative flex flex-col items-center justify-center">
       <h1 className="text-5xl font-bold text-center md:mt-10">
@@ -42,9 +43,8 @@ export default function EventCountdown() {
         <div className="w-full md:w-96 md:self-center cursor-pointer ">
           <Button
             size={[22, 2.5]}
-            text="REGISTER NOW"
+            text="Register Now"
             color="bg-backgroundGreen"
-            url="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience"
           />
         </div>
       </div>

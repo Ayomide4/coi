@@ -41,11 +41,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li className="group">
-          <a
-            target="_blank"
-            href="https://cash.app/$CircleOfIntimacy1"
-            className="relative inline-block"
-          >
+          <a href="/give" className="relative inline-block">
             Give
             <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white transform origin-left transition-all duration-300 ease-out scale-x-0 group-hover:scale-x-100" />
           </a>

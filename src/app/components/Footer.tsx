@@ -47,7 +47,7 @@ export default function Footer() {
             {/* Support Us */}
             <div>
               <h2 className="font-semibold text-xl sm:text-2xl">Support Us</h2>
-              <Link href="https://cash.app/$CircleOfIntimacy1" target="_blank">
+              <Link href="/give">
                 <p className="text-lg sm:text-xl font-light">Donate</p>
               </Link>
               <a
