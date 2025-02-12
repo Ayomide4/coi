@@ -37,7 +37,7 @@ export default function About() {
       description:
         "Temi Taiwo has a passion for promoting financial stewardship and accountability. As the Financial Coordinator for the Circle of Intimacy (COI), Temi manages budgeting, oversees financial operations, and ensures accurate reporting to support the program's goals.",
       phone: "(214) 604 0708",
-      email: "Temit@gmail.com",
+      email: "Temit.13@gmail.com",
     },
     {
       name: "Dewa Salau",
