@@ -45,6 +45,7 @@ export default function EventCountdown() {
             size={[22, 2.5]}
             text="Register Now"
             color="bg-backgroundGreen"
+            url="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience"
           />
         </div>
       </div>
