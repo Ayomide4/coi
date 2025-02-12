@@ -102,8 +102,11 @@ export default function DonationForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-      <div className="mb-4">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto bg-secondary p-6 rounded-lg shadow-md"
+    >
+      <div className="mb-6">
         <label className="block font-medium mb-2">Donation Amount ($)</label>
         <input
           type="number"
@@ -112,7 +115,7 @@ export default function DonationForm() {
             setAmount(e.target.value);
             setSuccess(false); // Reset success state when the amount changes
           }}
-          className="w-full p-2 border rounded text-black"
+          className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-blue-500"
           min="1"
           step="1" // Allows decimal input
           placeholder="Enter amount"
@@ -122,21 +125,21 @@ export default function DonationForm() {
       <div className="mb-4">
         <label className="block font-medium mb-2">Card Details</label>
         <CardElement
-          className="p-2 border rounded"
+          className="p-3 border border-gray-300 rounded-lg"
           options={cardElementOptions}
         />
       </div>
 
       {success && (
-        <p className="text-green-500 mb-4">
+        <p className="text-green-600 font-semibold mb-4">
           Your payment was successfully sent
         </p>
       )}
-      {error && <p className="text-red-500 mb-4">{error}</p>}
+      {error && <p className="text-red-600 font-semibold mb-4">{error}</p>}
       <button
         type="submit"
         disabled={!stripe || loading}
-        className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
+        className="w-full bg-primary text-white py-3 rounded-lg hover:bg-accent disabled:bg-gray-400 transition-all duration-200"
       >
         {loading ? "Processing..." : "Donate"}
       </button>

@@ -8,7 +8,6 @@ import RecapVideo from "./components/RecapVideo";
 import StoreCard from "./components/StoreCard";
 import ViewGallery from "./components/ViewGallery";
 import EventCountdown from "./components/EventCountdown";
-import { ToastContainer } from "react-toastify";
 import { Analytics } from "@vercel/analytics/next";
 
 const headingFont = Dela_Gothic_One({
@@ -88,8 +87,7 @@ export default function Home() {
       </div>
       <ViewGallery />
       <EventCountdown />
-      <ToastContainer />
-      <Analytics/>
+      <Analytics />
     </div>
   );
 }
