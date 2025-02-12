@@ -2,9 +2,14 @@
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import DonationForm from "../components/DonationForm";
+if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+throw new Error(
+    'NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY is not set. Please add it to your environment variables.'
+);
+}
 
 const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
 
 export default function DonatePage() {
