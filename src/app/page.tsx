@@ -22,6 +22,7 @@ const sora = Sora({
   weight: "400",
 });
 
+
 // TODO:
 // - add head title, desc to give page
 
