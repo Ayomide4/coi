@@ -24,12 +24,12 @@ const HamburgerMenu = () => {
   return (
     <div className="fixed top-10 right-5 z-50 md:hidden">
       {/* Hamburger Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className=""
         aria-label="Toggle Menu"
       >
-         <Image 
+        <Image
           src="hamburger.svg"
           alt=""
           width={40}
@@ -41,7 +41,7 @@ const HamburgerMenu = () => {
       {isOpen && (
         <div className="fixed inset-0 bg-[#101D1B]">
           <div className="fixed right-0 top-0 overflow-hidden h-screen w-full shadow-lg p-5 flex items-center justify-center ">
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="absolute top-5 right-5 text-4xl"
             >
@@ -52,7 +52,7 @@ const HamburgerMenu = () => {
                 <li><Link href="/" onClick={() => setIsOpen(false)}>HOME</Link></li>
                 <li><Link href="/about" onClick={() => setIsOpen(false)}>ABOUT</Link></li>
                 <li><Link href="/store" onClick={() => setIsOpen(false)}>STORE</Link></li>
-                <li><a target='_blank' href="https://cash.app/$CircleOfIntimacy1" onClick={() => setIsOpen(false)}>GIVE</a></li>
+                <li><Link href="/give" onClick={() => setIsOpen(false)}>GIVE</Link></li>
               </ul>
             </nav>
           </div>
