@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description: "Circle of Intimacy is a sacred gathering where worship meets truth. Join our community for nights of authentic worship, prayer, and spiritual connection.",
   keywords: "Circle of Intimacy, worship event, spiritual gathering, prayer night, Christian community",
   metadataBase: new URL("https://circleofintimacy.org"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Circle of Intimacy | A Night Where Worship Meets Truth",
     description: "Circle of Intimacy is a sacred gathering where worship meets truth. Join our community for nights of authentic worship, prayer, and spiritual connection.",
@@ -39,6 +42,12 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
   },
 };
 
@@ -49,6 +58,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Canonical URL will be handled by Next.js metadata */}
+      </head>
       <body className={`${sourceSans3.className}   antialiased bg-background`}>
         <HamburgerMenu />
         <Navigation />

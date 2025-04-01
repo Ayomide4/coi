@@ -1,9 +1,5 @@
-# *
 User-agent: *
 Allow: /
-
-# Host
-Host: https://circleofintimacy.org
 
 # Sitemaps
 Sitemap: https://circleofintimacy.org/sitemap.xml

@@ -3,9 +3,7 @@ const config = {
   siteUrl: "https://circleofintimacy.org",
   generateRobotsTxt: true,
   robotsTxtOptions: {
-    additionalSitemaps: [
-      'https://circleofintimacy.org/sitemap.xml',
-    ],
+
     policies: [
       {
         userAgent: '*',
