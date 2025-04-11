@@ -9,7 +9,7 @@ export default function Navigation() {
 
   return (
     <nav className="absolute top-10 right-5 hidden md:block z-30">
-      <ul className="flex gap-4 text-xl font-medium md:text-2xl ">
+      <ul className="flex gap-4 text-xl font-medium md:text-2xl  text-white">
         <li className="group ">
           <Link href="/" className="relative inline-block">
             Home

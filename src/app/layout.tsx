@@ -10,7 +10,7 @@ import Navigation from "./components/Navigation";
 const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Circle of Intimacy | A Night Where Worship Meets Truth",
+  title: "Circle of Intimacy | A place where intimacy deepens, strength is renewed, and restoration takes place.",
   description: "Circle of Intimacy is a sacred gathering where worship meets truth. Join our community for nights of authentic worship, prayer, and spiritual connection.",
   keywords: "Circle of Intimacy, worship event, spiritual gathering, prayer night, Christian community",
   metadataBase: new URL("https://circleofintimacy.org"),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Circle of Intimacy | A Night Where Worship Meets Truth",
+    title: "Circle of Intimacy | A place where intimacy deepens, strength is renewed, and restoration takes place.",
     description: "Circle of Intimacy is a sacred gathering where worship meets truth. Join our community for nights of authentic worship, prayer, and spiritual connection.",
     url: "https://circleofintimacy.org",
     siteName: "Circle of Intimacy",
@@ -74,7 +74,6 @@ export default function RootLayout({
               className="mr-2"
             />
           </a>
-          <p className="md:text-2xl">Cart(0)</p>
         </div>
 
         {children}

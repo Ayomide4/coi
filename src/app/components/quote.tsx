@@ -3,7 +3,7 @@ export default function Quote() {
     <div className="bg-background h-72 p-8 md:flex md:justify-center md:items-center lg:px-20">
       <div className="flex flex-col relative  z-20 md:w-full 2xl:w-4/6 ">
         <h1 className="text-3xl mb-0 z-20 mt-10 md:font-semibold md:text-4xl">
-          Draw near to God, and he will draw near to you.
+          So whether you eat or drink or whatever you do, do it all for the glory of God.
         </h1>
         <div className="absolute flex top-0  left-0 z-10 md:top-0">
           <div className="w-0 h-0 rotate-90 border-l-[0px] border-r-[50px] border-b-[50px] border-b-secondary border-transparent opacity-80  "></div>
@@ -15,7 +15,7 @@ export default function Quote() {
         </div>
 
         <h2 className=" text-3xl text-right md:text-left mt-20 md:mt-10 z-20 md:text-4xl">
-          —James 4:8
+          —1 Corinthians 10:31
         </h2>
       </div>
     </div>

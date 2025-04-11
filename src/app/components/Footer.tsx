@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="bg-foreground w-full p-5 md:m-0 md:flex md:flex-col md:items-center">
+    <div className="bg-foreground w-full p-5 md:m-0 md:flex md:flex-col md:items-center text-white">
       <div className="p-4 w-full flex flex-col md:flex-row items-center md:justify-between lg:w-4/5 max-w-full">
         {/* Desktop Logo */}
         <div className="hidden md:block">

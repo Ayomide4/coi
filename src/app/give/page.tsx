@@ -16,7 +16,7 @@ const stripePromise = loadStripe(
 
 export default function DonatePage() {
   return (
-    <div className="container mx-auto p-4 text-center">
+    <div className="container mx-auto p-4 text-center text-white">
       <h1 className="text-4xl md:text-5xl font-semibold mb-8 mt-24">
         Support Our Mission
       </h1>
