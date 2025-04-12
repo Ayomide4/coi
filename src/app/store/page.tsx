@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 
+// Note: This page is currently hidden from navigation
 export default function Store() {
   return (
     <div className="min-h-screen bg-[#081211] text-white flex items-center justify-center">

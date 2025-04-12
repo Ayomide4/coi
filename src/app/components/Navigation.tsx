@@ -30,6 +30,7 @@ export default function Navigation() {
             />
           </Link>
         </li>
+        {/* Store page temporarily hidden
         <li className="group">
           <Link href="/store" className="relative inline-block">
             Store
@@ -40,6 +41,7 @@ export default function Navigation() {
             />
           </Link>
         </li>
+        */}
         <li className="group">
           <a href="/give" className="relative inline-block">
             Give

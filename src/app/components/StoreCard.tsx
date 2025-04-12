@@ -27,7 +27,7 @@ export default function StoreCard({ imageURL, firstImage }: Props) {
           </h1>
         )}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full md:px-8 px-2">
-          <Button size={[22, 2]} text="SHOP NOW" url="/store" />
+          <Button size={[22, 2]} text="SHOP NOW" url="https://docs.google.com/forms/d/e/1FAIpQLSfJTZwqahy2SJGWLvbAopuZSipSPDcCsYYtk22GgP002Unm7g/viewform" target="_blank" />
         </div>
       </div>
     </div>
