@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-
+import HamburgerIcon from "../../../public/hamburger.svg"
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -30,8 +30,8 @@ const HamburgerMenu = () => {
         aria-label="Toggle Menu"
       >
         <Image
-          src="/hamburger.svg"
-          alt=""
+          src={HamburgerIcon}
+          alt="Menu Icon"
           width={40}
           height={40}
           className="text-current"
