@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 export interface LightboxImage {
   id: string;
-  src: string;        // full‑res URL
-  thumbnail: string;  // small URL
+  src: string;
+  thumbnail: string;
   alt?: string;
 }
 
@@ -19,25 +19,40 @@ export function Lightbox({ images }: LightboxProps) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
-  const prev = () => setIndex(i => (i === 0 ? images.length - 1 : i - 1));
-  const next = () => setIndex(i => (i === images.length - 1 ? 0 : i + 1));
+  const prevImage = () =>
+    setIndex(i => (i === 0 ? images.length - 1 : i - 1));
+  const nextImage = () =>
+    setIndex(i => (i === images.length - 1 ? 0 : i + 1));
 
-  // Arrow keys + Escape
+  // Arrow keys + Escape, inlined so no missing deps
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
-      if (e.key === 'Escape') { e.preventDefault(); setOpen(false); }
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        setIndex(i => (i === 0 ? images.length - 1 : i - 1));
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        setIndex(i => (i === images.length - 1 ? 0 : i + 1));
+      }
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        setOpen(false);
+      }
     };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, [open, images.length]);
 
-  // Lock background scroll
+  // Lock body scroll when open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [open]);
 
   return (
@@ -48,8 +63,8 @@ export function Lightbox({ images }: LightboxProps) {
           onClick={() => setOpen(false)}
         >
           <button
-            onClick={e => { e.stopPropagation(); prev(); }}
-            className="hidden md:block absolute left-4 text-white text-4xl p-2"
+            onClick={e => { e.stopPropagation(); prevImage(); }}
+            className="hidden md:block absolute left-20 text-white text-4xl p-2"
             aria-label="Previous image"
           >
             ‹
@@ -66,8 +81,8 @@ export function Lightbox({ images }: LightboxProps) {
           </div>
 
           <button
-            onClick={e => { e.stopPropagation(); next(); }}
-            className="hidden md:block absolute right-4 text-white text-4xl p-2"
+            onClick={e => { e.stopPropagation(); nextImage(); }}
+            className="hidden md:block absolute right-20 text-white text-4xl p-2"
             aria-label="Next image"
           >
             ›
@@ -75,7 +90,6 @@ export function Lightbox({ images }: LightboxProps) {
         </div>
       )}
 
-      {/* Thumbnail grid */}
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {images.map((img, i) => (
           <div
