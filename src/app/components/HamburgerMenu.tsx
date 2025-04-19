@@ -30,7 +30,7 @@ const HamburgerMenu = () => {
         aria-label="Toggle Menu"
       >
         <Image
-          src="hamburger.svg"
+          src="/hamburger.svg"
           alt=""
           width={40}
           height={40}

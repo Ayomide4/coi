@@ -67,7 +67,7 @@ export default function RootLayout({
         <div className="flex items-center absolute top-10 left-5 z-20">
           <a target="_blank" href="https://www.instagram.com/circleofintimacy/">
             <Image
-              src="Instagram.svg"
+              src="/Instagram.svg"
               width={40}
               height={40}
               alt="Circle of Intimacy Instagram"
