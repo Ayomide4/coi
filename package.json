@@ -10,6 +10,8 @@
     "test": "next dev -H 0.0.0.0"
   },
   "dependencies": {
+    "@sanity/client": "^6.29.0",
+    "@sanity/image-url": "^1.1.0",
     "@stripe/react-stripe-js": "^3.1.1",
     "@stripe/stripe-js": "^5.6.0",
     "@vercel/analytics": "^1.5.0",

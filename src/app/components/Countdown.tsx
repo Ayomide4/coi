@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 
+//TODO: make countdown look prettier
+
 export default function CountdownDisplay() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

@@ -54,6 +54,7 @@ const HamburgerMenu = () => {
                 {/* Store page temporarily hidden
 <li><Link href="/store" onClick={() => setIsOpen(false)}>STORE</Link></li>
 */}
+                <li><Link href="/gallery" onClick={() => setIsOpen(false)}>GALLERY</Link></li>
                 <li><Link href="/give" onClick={() => setIsOpen(false)}>GIVE</Link></li>
               </ul>
             </nav>
