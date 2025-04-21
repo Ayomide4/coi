@@ -64,7 +64,9 @@ export function Lightbox({ images }: LightboxProps) {
         >
           <button
             onClick={e => { e.stopPropagation(); prevImage(); }}
-            className="hidden md:block absolute left-20 text-white text-4xl p-2"
+
+            className="hidden md:block absolute left-10 text-white text-4xl p-2 cursor-pointer z-40"
+
             aria-label="Previous image"
           >
             ‹
@@ -82,7 +84,8 @@ export function Lightbox({ images }: LightboxProps) {
 
           <button
             onClick={e => { e.stopPropagation(); nextImage(); }}
-            className="hidden md:block absolute right-20 text-white text-4xl p-2"
+
+            className="hidden md:block absolute right-10 text-white text-4xl p-2 cursor-pointer z-40"
             aria-label="Next image"
           >
             ›
