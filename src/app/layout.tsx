@@ -64,14 +64,14 @@ export default function RootLayout({
       <body className={`${sourceSans3.className}   antialiased bg-background`}>
         <HamburgerMenu />
         <Navigation />
-        <div className="flex items-center absolute top-10 left-5 z-20">
+        <div className="flex items-center absolute top-10 left-5 lg:left-12 z-20">
           <a target="_blank" href="https://www.instagram.com/circleofintimacy/">
             <Image
               src="/Instagram.svg"
               width={40}
               height={40}
               alt="Circle of Intimacy Instagram"
-              className="mr-2"
+              className=""
             />
           </a>
         </div>

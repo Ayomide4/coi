@@ -10,7 +10,7 @@ export default function Navigation() {
     pathname === path || pathname.startsWith(path + '/');
 
   return (
-    <nav className="absolute top-10 right-5 hidden md:block z-30">
+    <nav className="absolute top-10 right-12 hidden md:block z-30">
       <ul className="flex gap-4 text-xl font-medium md:text-2xl text-white">
         {[
           { href: '/', label: 'Home' },

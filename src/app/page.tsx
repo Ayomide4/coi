@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import coi_bg from "../../public/coi-bg.jpg";
-import { Dela_Gothic_One, Sora } from "next/font/google";
-import Button from "./components/button";
+import { Rubik, Staatliches } from "next/font/google";
 import Quote from "./components/quote";
 import Vision from "./components/vision";
 import RecapVideo from "./components/RecapVideo";
@@ -10,21 +9,27 @@ import StoreCard from "./components/StoreCard";
 import ViewGallery from "./components/ViewGallery";
 import EventCountdown from "./components/EventCountdown";
 import { Analytics } from "@vercel/analytics/next";
+import Link from "next/link";
 
-const headingFont = Dela_Gothic_One({
+
+const newHeading = Staatliches({
   subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
+  weight: "400"
+}
+)
 
-const sora = Sora({
+const body = Rubik({
   subsets: ["latin"],
-  weight: "400",
-});
+  weight: ["400", "500", "600", "700"]
+}
+)
 
-
-// TODO:
-// - add head title, desc to give page
+const dates = (
+  <div className="hidden lg:block md:absolute bottom-32 right-10 z-20 space-y-2">
+    <div className={`${newHeading.className} justify-between hidden md:flex rounded bg-white text-black text-lg xl:text-2xl w-48 xl:w-64 p-2`}><p>FRIDAY</p><p>6:00 pm-11:00pm</p></div>
+    <div className={`${newHeading.className} justify-between hidden md:flex rounded border border-white text-lg xl:text-2xl bg-inherit text-white w-48 xl:w-64 p-2`}><p>SATURDAY</p><p>5:30 pm-11:00pm</p></div>
+  </div>
+)
 
 export default function Home() {
   return (
@@ -37,35 +42,25 @@ export default function Home() {
           content="Inspiring intimacy with Jesus through worship, prayer, and obedience. Find purpose and fulfillment in Him. A space to experience God's undiluted presence. Join us!"
         />
       </Head>
-      <div className="w-full h-[70vh] lg:h-[95vh] relative flex items-center">
+      <div className="w-full h-[90vh] lg:h-[95vh] relative flex items-center">
         {/* Black Overlay */}
-        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
 
         {/* Header Content */}
-        <div className="relative z-20 flex flex-col w-full items-center justify-center text-center">
-          {/* add         <meta name="description" content="Join our vibrant community at [Ministry Name] in [City]. We offer [brief description of services/events]." /> */}
-          <h2 className={`${sora.className} text-2xl text-white md:text-4xl`}>
-            Join us for
-          </h2>
+        <div className="z-20 px-4 absolute bottom-20  flex flex-col lg:w-fit  items-start justify-center  md:absolute lg:bottom-32 lg:left-12">
           <h1
-            className={`${headingFont.className} text-4xl md:text-5xl font-bold tracking-tighter text-white 2xl:text-7xl`}
+            className={`${newHeading.className}  text-6xl md:text-8xl font-normal  text-white 2xl:text-7xl`}
           >
-            CIRCLE OF INTIMACY
-          </h1>
-          <h1
-            className={`${headingFont.className} font-extrabold text-6xl tracking-tighter bg-gradient-to-r from-[#9EDCD7] from-80% to-[#2A847C] text-transparent bg-clip-text 2xl:text-8xl`}
-          >
-            2025
+            CIRCLE OF <span className={`${newHeading.className}  bg-gradient-to-r from-[#9EDCD7] from-80% to-[#2A847C] text-transparent bg-clip-text `}>INTIMACY</span>
           </h1>
 
-          <div className="mt-10 w-72 md:w-72 2xl:w-96">
-            <Button
-              size={[22, 3]}
-              text="REGISTER NOW"
-              url="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience"
-            />
-          </div>
+          <h2 className={`${body.className} mt-4  text-xl md:text-3xl lg:text-4xl text-wrap lg:w-[42rem] mb-10 font-medium text-white 2xl:text-7xl`} >The home of faceless men. Knowing Christ and making him known</h2>
+          <Link href="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience" target="_blank">
+            <button className={`${newHeading.className} bg-primary w-52 h-12 xl:w-64 xl:h-16 rounded text-3xl hover:bg-primary/95 shadow-lg transition-all transform hover:scale-105`}>REGISTER</button>
+          </Link>
         </div>
+
+        {dates}
 
         {/* Background Image */}
         <Image

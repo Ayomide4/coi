@@ -47,7 +47,7 @@ const HamburgerMenu = () => {
             >
               ✕
             </button>
-            <nav className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <nav className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
               <ul className="space-y-10 text-6xl font-light">
                 <li><Link href="/" onClick={() => setIsOpen(false)}>HOME</Link></li>
                 <li><Link href="/about" onClick={() => setIsOpen(false)}>ABOUT</Link></li>
