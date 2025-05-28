@@ -183,16 +183,16 @@ export default function About() {
           <TeamCarousel team={team} />
         </section>
         <section className="text-center mb-10 md:mb-10 px-8 flex flex-col items-center">
-          <h2 id="vision" className="text-3xl font-normal mb-4 md:text-4xl">
+          <h2 id="vision" className="text-3xl font-normal mb-4 md:text-4xl ">
             Our Vision
           </h2>
           <div className="space-y-4 mb-8 ">
-            <p className="text-lg md:text-xl">
+            <p className="text-lg md:text-2xl lg:text-2xl ">
               Our vision is to see a global revival breakout and spread across the earth through this ministry.
               A movement led by faceless men who find their identity in Christ and yearn to only glorify God.
             </p>
-            <p className="text-lg md:text-xl">
-              &apos;&apos;Therefore, whether you eat or drink, or whatever you do, do all to the glory of God.&apos;&apos; - <em className="font-bold">I Corinthians 10:31 NKJV</em>
+            <p className="text-lg md:text-xl lg:text-2xl ">
+              &apos;&apos;Therefore, whether you eat or drink, or whatever you do, do all to the glory of God.&apos;&apos; — <em className="font-bold">I Corinthians 10:31 NKJV</em>
             </p>
           </div>
           <div className="relative w-full h-[500px] md:mt-10">
@@ -205,14 +205,14 @@ export default function About() {
           </div>
         </section>
         <section className="text-center px-8 md:mb-10">
-          <h2 id="mission" className="text-3xl font-normal mb-4  md:text-4xl">
+          <h2 id="mission" className="text-3xl font-normal mb-4  md:text-4xl ">
             Our Mission
           </h2>
           <div className="space-y-4  text-lg flex flex-col items-center">
-            <p className="text-lg md:text-xl">
+            <p className="text-lg md:text-xl lg:text-2xl ">
               Our mission is to inspire young people to know Jesus intimately, through worship, prayer and the word of God. Encouraging them to make Him known through different God given skills and gifts all over the world.            </p>
-            <p className="text-lg md:text-xl">
-              Philippians 3:10 "I want to know Christ and experience the mighty power that raised him from the dead. I want to suffer with him, sharing in his death,"            </p>
+            <p className="text-lg md:text-xl lg:text-2xl ">
+              &apos;&apos;I want to know Christ and experience the mighty power that raised him from the dead. I want to suffer with him, sharing in his death,&apos;&apos;<em className="font-bold">— Philippians 3:10</em>            </p>
 
 
             <div className="w-full md:hidden">
