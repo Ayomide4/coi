@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Button from "./button";
+import Link from "next/link";
 import CountdownDisplay from "./Countdown";
 
 export default function EventCountdown() {
@@ -40,13 +40,15 @@ export default function EventCountdown() {
 
       <CountdownDisplay />
       <div className="w-full md:flex md:items-center md:justify-center">
-        <div className="w-full md:w-96 md:self-center cursor-pointer ">
-          <Button
-            size={[22, 2.5]}
-            text="Register Now"
-            color="bg-backgroundGreen"
-            url="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience"
-          />
+        <div className="w-full md:w-96 md:self-center">
+          <Link
+            href="https://www.zeffy.com/en-US/ticketing/circle-of-intimacy-worship-experience"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-backgroundGreen text-2xl 2xl:text-3xl w-full md:p-2 cursor-pointer hover:bg-opacity-95"
+          >
+            Register Now
+          </Link>
         </div>
       </div>
     </div>

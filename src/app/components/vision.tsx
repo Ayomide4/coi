@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import Button from "./button"; // Assuming Button component is correctly imported
+import Link from "next/link";
 
 export default function Vision() {
   return (
@@ -30,14 +30,19 @@ export default function Vision() {
           */}
           <div className="flex flex-col items-center py-5">
             {/* Paragraph: text-center ensures its text is centered. mb-8 for spacing. */}
-            <p className="mb-8 max-w-4xl text-center text-3xl text-white lg:text-4xl ">
+            <p className="mb-8 max-w-4xl text-center text-3xl text-white  ">
               Our vision is to see a global revival breakout and spread across
               the earth through this ministry. A movement led by faceless men
               who find their identity in Christ and yearn to only glorify God.
             </p>
             {/* Button container: Spacing from paragraph is handled by p's mb-8 and this div's mt. */}
             <div className="mt-10 w-full md:w-60 lg:w-80 xl:w-96 lg:mt-20">
-              <Button size={[22, 3]} text="LEARN MORE" url="/about" />
+              <Link
+                href="/about"
+                className="flex items-center justify-center bg-primary text-2xl 2xl:text-3xl w-full md:p-2 cursor-pointer rounded  hover:bg-primary/95 shadow-lg transition-all "
+              >
+                LEARN MORE
+              </Link>
             </div>
           </div>
         </div>
