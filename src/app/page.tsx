@@ -15,14 +15,12 @@ import Link from "next/link";
 const newHeading = Staatliches({
   subsets: ["latin"],
   weight: "400"
-}
-)
+})
 
 const body = Rubik({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"]
-}
-)
+})
 
 const dates = (
   <div className="hidden lg:block md:absolute bottom-32 right-10 z-20 space-y-2">

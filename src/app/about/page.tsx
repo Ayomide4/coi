@@ -188,14 +188,11 @@ export default function About() {
           </h2>
           <div className="space-y-4 mb-8 ">
             <p className="text-lg md:text-xl">
-              Our vision is to see a generation pursuing Jesus, living as His
-              dwelling place, boldly sharing the gospel, and carrying His love
-              to the world.
+              Our vision is to see a global revival breakout and spread across the earth through this ministry.
+              A movement led by faceless men who find their identity in Christ and yearn to only glorify God.
             </p>
             <p className="text-lg md:text-xl">
-              To inspire intimacy with Jesus by fostering worship, prayer, and
-              obedience, helping people find purpose and fulfillment in Him. A
-              Space to experience Gods undiluted presence.
+              &apos;&apos;Therefore, whether you eat or drink, or whatever you do, do all to the glory of God.&apos;&apos; - <em className="font-bold">I Corinthians 10:31 NKJV</em>
             </p>
           </div>
           <div className="relative w-full h-[500px] md:mt-10">
@@ -213,26 +210,11 @@ export default function About() {
           </h2>
           <div className="space-y-4  text-lg flex flex-col items-center">
             <p className="text-lg md:text-xl">
-              Circle of Intimacy is a nonprofit organization that exists to
-              facilitate life-changing encounters with God by creating sacred
-              spaces where His presence can dwell.
-            </p>
+              Our mission is to inspire young people to know Jesus intimately, through worship, prayer and the word of God. Encouraging them to make Him known through different God given skills and gifts all over the world.            </p>
             <p className="text-lg md:text-xl">
-              Through worship, prayer, and intentional gatherings, we seek to
-              cultivate an atmosphere where individuals can experience spiritual
-              revival and personal transformation.
-            </p>
+              Philippians 3:10 "I want to know Christ and experience the mighty power that raised him from the dead. I want to suffer with him, sharing in his death,"            </p>
 
-            <p className="text-lg md:text-xl">
-              Our mission is to inspire and empower a generation to fully
-              embrace their identity as devoted sons and daughters of Christ.
-            </p>
-            <p className="text-lg md:text-xl">
-              We envision a movement of humble, fearless men and women who find
-              their worth in Him and carry the message of hope and faith to
-              every corner of the earth, impacting lives and communities for the
-              glory of God.
-            </p>
+
             <div className="w-full md:hidden">
               <TeamImage />
             </div>
@@ -247,6 +229,6 @@ export default function About() {
           </div>
         </section>
       </main>
-    </div>
+    </div >
   );
 }

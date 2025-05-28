@@ -6,8 +6,23 @@ import Footer from "./components/Footer";
 import HamburgerMenu from "./components/HamburgerMenu";
 import Image from "next/image";
 import Navigation from "./components/Navigation";
+import { Rubik, Staatliches } from "next/font/google";
 
 const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-rubik", // Define a CSS variable for Rubik
+});
+
+const staatliches = Staatliches({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-staatliches", // Define a CSS variable for Staatliches
+});
 
 export const metadata: Metadata = {
   title: "Circle of Intimacy | A place where intimacy deepens, strength is renewed, and restoration takes place.",
@@ -61,7 +76,7 @@ export default function RootLayout({
       <head>
         {/* Canonical URL will be handled by Next.js metadata */}
       </head>
-      <body className={`${sourceSans3.className}   antialiased bg-background`}>
+      <body className={`${sourceSans3.className} ${rubik.variable} ${staatliches.variable}  antialiased bg-background `}>
         <HamburgerMenu />
         <Navigation />
         <div className="flex items-center absolute top-10 left-5 lg:left-12 z-20">

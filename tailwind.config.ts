@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-rubik)", "sans-serif"], // Rubik will be the default sans-serif
+        heading: ["var(--font-staatliches)", "serif"], // Staatliches for headings (fallback to serif)
+      },
       colors: {
         textColor: "#EDF7F6",
         background: "#081211",
