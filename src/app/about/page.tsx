@@ -20,7 +20,7 @@ export default function About() {
     {
       name: "Crystal Oparaji",
       role: "Executive Assistant",
-      imageUrl: "/Crystal.jpeg",
+      imageUrl: "/Crystal.png",
       born: "Dallas, Texas",
       raised: "Rowlett, Texas",
       description:
@@ -51,7 +51,7 @@ export default function About() {
     },
     {
       name: "Ayomide Ifanse",
-      role: "Live Stream & Broadcast Coordinator",
+      role: "Production Coordinator",
       imageUrl: "/AyoIfanse.JPG",
       born: "New Orleans, Louisiana",
       raised: "New Orleans, Louisiana and Houston, Texas",
@@ -63,7 +63,7 @@ export default function About() {
     },
     {
       name: "Subomi Borishade",
-      role: "Streamline Coordinator",
+      role: "Production Coordinator",
       imageUrl: "/Subomi.jpg",
       born: "Abuja, Nigeria",
       raised: "Abuja, Nigeria",
