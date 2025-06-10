@@ -20,7 +20,7 @@ export default function About() {
     {
       name: "Crystal Oparaji",
       role: "Executive Assistant",
-      imageUrl: "/Crystal.png",
+      imageUrl: "/crystal.png",
       born: "Dallas, Texas",
       raised: "Rowlett, Texas",
       description:
