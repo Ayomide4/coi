@@ -28,7 +28,7 @@ export default function StoreCard({ imageURL, firstImage }: Props) {
         )}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8 w-full md:px-8 px-2">
           <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfJTZwqahy2SJGWLvbAopuZSipSPDcCsYYtk22GgP002Unm7g/viewform"
+            href="https://www.zeffy.com/en-US/ticketing/coi-merch"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center bg-primary text-2xl 2xl:text-3xl w-full md:p-2 cursor-pointer hover:bg-primary/95"
